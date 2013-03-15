@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE container [
+<!ENTITY hellip     " &#x2E;&#xA0;&#x2E;&#xA0;&#x2E; ">
+<!ENTITY inked     "&#x2759;">
+<!ENTITY caret     "&#x2038;">
+<!ENTITY minus     "&#x2212;">
+<!ENTITY plus     "&#x002B;">
+<!ENTITY shy     "&#x00AD;">
+<!ENTITY sigrange     "&#x002D;">
+<!ENTITY swdash     "&#x2002;&#x007E;&#x2002;">
+<!ENTITY verbar     "&#x2002;&#x007C;&#x2002;">
+<!ENTITY cmacr     "&#x63;&#x304;">
+]>
+<TextFlow xmlns="http://ns.adobe.com/textLayout/2008" NVSns="http://www.mla.org/NVSns" xml="http://www.w3.org/XML/1998/namespace" >
+
+
+
+    <div type="playtext" xml:id="div_playtext">
+
+        <div type="playtext_source" xml:id="div_playtext_source">
+            
+            <p type="milestone" unit="sig_F" n="H1">(H1)</p>
+            <br type="lb" xml:id="tln_0000" n="0" rend="print_tln"/>
+            <p type="head">The Comedie of Errors.</p>
+
+
+
+            <div type="act" n="1" xml:id="div_act1">
+
+                <div type="scene" n="1" xml:id="div_act1_scene1">
+
+                    <br type="lb" xml:id="tln_0001" n="1"/>
+                    <span type="head">Actus primus, Scena prima.</span>
+
+                    <span type="milestone" unit="sig_F" n="H1a">(H1<hi rend="superscript">a</hi>)</span>
+                    <br type="lb" xml:id="tln_0002" n="2"/>
+                    <g type="stage" _type="enter" rend="align(center)">Enter the <span type="name">Duke of Ephesus</span>, with the <span type="name">Merchant of Siracusa</span>, <br type="lb" xml:id="tln_0003" n="3"/><span type="name">Iaylor</span>, and other attendants.</g>
+                    <br type="lb" xml:id="tln_0004" n="4"/>
+                    <p type="sp" styleName="sp" who="#Aegeon">
+                        <span type="speaker">Marchant.</span>
+                       <br type="lb" xml:id="tln_0005" n="5" rend="print_tln"/>
+                       <g type="p">Proceed <span type="name">Solinus</span> to procure my fall, <br type="lb" xml:id="tln_0006" n="6"/>And by the doome of death end woes and all.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0007" n="7"/>
+                    <p type="sp" styleName="sp" who="#Salinus">
+                        <span type="speaker">Duke.</span>
+                        <g type="p">Merchant of <span type="name">Siracusa</span>, plead no more. <br type="lb" xml:id="tln_0008" n="8"/>I am not partiall to infringe our Lawes; <br type="lb" xml:id="tln_0009" n="9"/>The enmity and discord which of late <br type="lb" xml:id="tln_0010" n="10" rend="print_tln"/>Sprung from the rancorous outrage of your Duke, <br type="lb" xml:id="tln_0011" n="11"/>To Merchants our well-dealing Countrimen, <br type="lb" xml:id="tln_0012" n="12"/>Who wanting gilders to redeeme their liues, <br type="lb" xml:id="tln_0013" n="13"/>Haue seal’d his rigorous statutes with their blouds, <br type="lb" xml:id="tln_0014" n="14"/>Excludes all pitty from our threatning lookes: <br type="lb" xml:id="tln_0015" n="15" rend="print_tln"/>For since the mortall and intestine iarres <br type="lb" xml:id="tln_0016" n="16"/>Twixt thy seditious Countrimen and vs, <br type="lb" xml:id="tln_0017" n="17"/>It hath in solemne Synodes beene decreed, <br type="lb" xml:id="tln_0018" n="18"/>Both by the <span type="name">Siracusians</span> and our selues, <br type="lb" xml:id="tln_0019" n="19"/>To admit no trafficke to our aduerse
+                            townes: <br type="lb" xml:id="tln_0020" n="20" rend="print_tln"/>Nay more, if any borne at <span type="name">Ephesus</span>
+                            <br type="lb" xml:id="tln_0021" n="21"/>Be seene at any <span type="name">Siracusian</span> Marts and Fayres: <br type="lb" xml:id="tln_0022" n="22"/>Againe, if any <span type="name">Siracusian</span> borne <br type="lb" xml:id="tln_0023" n="23"/>Come to the Bay of <span type="name">Ephesus</span>, he dies: <br type="lb" xml:id="tln_0024" n="24"/>His goods confiscate to the Dukes dispose, <br type="lb" xml:id="tln_0025" n="25" rend="print_tln"/>Vnlesse a thousand markes be leuied <br type="lb" xml:id="tln_0026" n="26"/>To quit the penalty, and to ransome him: <br type="lb" xml:id="tln_0027" n="27"/>Thy substance, valued at the highest rate, <br type="lb" xml:id="tln_0028" n="28"/>Cannot amount vnto a hundred Markes, <br type="lb" xml:id="tln_0029" n="29"/>Therefore by Law thou art condemn’d to die.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0030" n="30" rend="print_tln"/>
+                    <p type="sp" styleName="sp" who="#Aegeon">
+                        <span type="speaker">Mer.</span>
+                        <g type="p">Yet this my comfort, when your words are done, <br type="lb" xml:id="tln_0031" n="31"/>My woes end likewise with the euening Sonne.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0032" n="32"/>
+                    <p type="sp" styleName="sp" who="#Salinus">
+                        <span type="speaker">Duk.</span>
+                        <g type="p">Well <span type="name">Siracusian</span>; say in briefe the cause <br type="lb" xml:id="tln_0033" n="33"/>Why thou departedst from thy natiue home? <br type="lb" xml:id="tln_0034" n="34"/>And for what cause thou cam’st to <span type="name">Ephesus</span>.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0035" n="35" rend="print_tln"/>
+                    <p type="sp" styleName="sp" who="#Aegeon">
+                        <span type="speaker">Mer.</span>
+                        <g type="p">A heauier taske could not haue beene impos’d, <br type="lb" xml:id="tln_0036" n="36"/>Then I to speake my griefes vnspeakeable: <br type="lb" xml:id="tln_0037" n="37"/>Yet that the world may witnesse that my end <br type="lb" xml:id="tln_0038" n="38"/>Was wrought by nature, not by vile offence, <br type="lb" xml:id="tln_0039" n="39"/>Ile vtter what my sorrow giues me leaue. <br type="lb" xml:id="tln_0040" n="40" rend="print_tln"/>In <span type="name">Syracusa</span> was I borne, and wedde <br type="lb" xml:id="tln_0041" n="41"/>Vnto a woman, happy but for me, <br type="lb" xml:id="tln_0042" n="42"/>And by me; had not our hap beene bad: <br type="lb" xml:id="tln_0043" n="43"/>With her I liu’d in ioy, our wealth increast <br type="lb" xml:id="tln_0044" n="44"/>By prosperous voyages I often made <br type="lb" xml:id="tln_0045" n="45" rend="print_tln"/>To <span type="name">Epidamium</span>, till my factors death, <br type="lb" xml:id="tln_0046" n="46"/>And he great care of goods at randone left, <br type="lb" xml:id="tln_0047" n="47"/>Drew me from kinde embracements of my spouse; <br type="lb" xml:id="tln_0048"
+                                n="48"/>From whom my absence was not sixe moneths olde, <br type="lb" xml:id="tln_0049" n="49"/>Before her selfe (almost at fainting vnder <milestone unit="sig_F" n="H1b">(H1<hi rend="superscript">b</hi>)</milestone>
+                            <br type="lb" xml:id="tln_0050" n="50" rend="print_tln"/>The pleasing punishment that women beare) <br type="lb" xml:id="tln_0051" n="51"/>Had made prouision for her following me, <br type="lb" xml:id="tln_0052" n="52"/>And soone, and safe, arriued where I was: <br type="lb" xml:id="tln_0053" n="53"/>There had she not beene long, but she became <br type="lb" xml:id="tln_0054" n="54"/>A ioyfull mother of two goodly sonnes: <br type="lb" xml:id="tln_0055" n="55" rend="print_tln"/>And, which was strange, the one so like the other, <br type="lb" xml:id="tln_0056" n="56"/>As could not be distinguish’d but by names. <br type="lb" xml:id="tln_0057" n="57"/>That very howre, and in the selfe-same Inne, <br type="lb" xml:id="tln_0058" n="58"/>A meane woman was deliuered <br type="lb" xml:id="tln_0059" n="59"/>Of such a burthen Male, twins both alike: <br type="lb" xml:id="tln_0060" n="60" rend="print_tln"/>Those, for their parents were exceeding poore, <br type="lb" xml:id="tln_0061" n="61"/>I bought, and brought vp to attend my sonnes. <br type="lb" xml:id="tln_0062" n="62"/>My wife, not
+                            meanely prowd of two such boyes, <br type="lb" xml:id="tln_0063" n="63"/>Made daily motions for our home returne: <br type="lb" xml:id="tln_0064" n="64"/>Vnwilling I agreed, alas, too soone wee came aboord. <br type="lb" xml:id="tln_0065" n="65" rend="print_tln"/>A league from <span type="name">Epidamium</span> had we saild <br type="lb" xml:id="tln_0066" n="66"/>Before the alwaies winde-obeying deepe <br type="lb" xml:id="tln_0067" n="67"/>Gaue any Tragicke Instance of our harme: <br type="lb" xml:id="tln_0068" n="68"/>But longer did we not retaine much hope;
+                            <br type="lb" xml:id="tln_0069" n="69"/>For what obscured light the heauens did grant, <br type="lb" xml:id="tln_0070" n="70" rend="print_tln"/>Did but conuay vnto our fearefull mindes <br type="lb" xml:id="tln_0071" n="71"/>A doubtfull warrant of immediate death, <br type="lb" xml:id="tln_0072" n="72"/>Which though my selfe would gladly haue imbrac’d, <br type="lb" xml:id="tln_0073" n="73"/>Yet the incessant weepings of my wife, <br type="lb" xml:id="tln_0074" n="74"/>Weeping before for what she saw must come, <br type="lb" xml:id="tln_0075" n="75" rend="print_tln"/>And pitteous playnings of the prettie babes <br type="lb" xml:id="tln_0076" n="76"/>That mourn’d for fashion, ignorant what to feare, <br type="lb" xml:id="tln_0077" n="77"/>Forst me to seeke delayes for them and me, <br type="lb" xml:id="tln_0078" n="78"/>And this it was: (for other meanes was none) <br type="lb" xml:id="tln_0079" n="79"/>The Sailors sought for safety by our boate, <br type="lb" xml:id="tln_0080" n="80" rend="print_tln"/>And left the ship then sinking ripe to vs. <br type="lb" xml:id="tln_0081" n="81"/>My wife, more carefull for the latter borne, <br type="lb" xml:id="tln_0082" n="82"/>Had fastned him vnto a small spare Mast, <br type="lb" xml:id="tln_0083" n="83"/>Such as sea-faring men prouide for stormes: <br type="lb" xml:id="tln_0084" n="84"/>To him one of the other twins was bound, <br type="lb" xml:id="tln_0085" n="85" rend="print_tln"/>Whil’st I had beene like heedfull of the other. <br type="lb" xml:id="tln_0086" n="86"/>The children thus dispos’d, my wife and I,
+                            <br type="lb" xml:id="tln_0087" n="87"/>Fixing our eyes on whom our care was fixt, <br type="lb" xml:id="tln_0088" n="88"/>Fastned our selues at eyther end the mast, <br type="lb" xml:id="tln_0089" n="89"/>And floating straight, obedient to the streame, <br type="lb" xml:id="tln_0090" n="90" rend="print_tln"/>Was carried towards <span type="name">Corinth</span>, as we thought. <br type="lb" xml:id="tln_0091" n="91"/>At length the sonne gazing vpon the earth, <br type="lb" xml:id="tln_0092" n="92"/>Disperst those vapours that offended vs, <br type="lb" xml:id="tln_0093" n="93"/>And by the benefit of his wished light <br type="lb" xml:id="tln_0094" n="94"/>The seas waxt calme, and we discouered <br type="lb" xml:id="tln_0095" n="95" rend="print_tln"/>Two shippes from farre, making amaine to vs: <br type="lb" xml:id="tln_0096" n="96"/>Of <span type="name">Corinth</span> that, of <span type="name">Epidarus</span> this, <br type="lb" xml:id="tln_0097" n="97"/>But ere they came, oh let me say no more, <br type="lb" xml:id="tln_0098" n="98"/>Gather the sequell by that went before.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0099" n="99"/>
+                    <p type="sp" styleName="sp" who="#Salinus">
+                        <span type="speaker">Duk.</span>
+                        <g type="p">Nay forward old man, doe not breake off so, <milestone unit="sig_F" n="H1va">(H1<hi rend="superscript">va</hi>)</milestone>
+                            <br type="lb" xml:id="tln_0100" n="100" rend="print_tln"/>For we may pitty, though not pardon thee.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0101" n="101"/>
+                    <p type="sp" styleName="sp" who="#Aegeon">
+                        <span type="speaker">Merch.</span>
+                        <g type="p">Oh had the gods done so, I had not now <br type="lb" xml:id="tln_0102" n="102"/>Worthily tearm’d them mercilesse to vs: <br type="lb" xml:id="tln_0103" n="103"/>For ere the ships could meet by twice fiue leagues, <br type="lb" xml:id="tln_0104" n="104"/>We were encountred by a mighty rocke, <br type="lb" xml:id="tln_0105" n="105" rend="print_tln"/>Which being violently borne vp, <br type="lb" xml:id="tln_0106" n="106"/>Our helpefull ship was splitted in the midst; <br type="lb" xml:id="tln_0107" n="107"/>So that in this vniust diuorce of vs, <br type="lb" xml:id="tln_0108" n="108"/>Fortune had left to both of vs alike, <br type="lb" xml:id="tln_0109" n="109"/>What to delight in, what to sorrow for, <br type="lb" xml:id="tln_0110" n="110" rend="print_tln"/>Her part, poore soule, seeming as burdened <br type="lb" xml:id="tln_0111" n="111"/>With lesser waight, but not with lesser woe, <br type="lb" xml:id="tln_0112" n="112"/>Was carried with more speed before the winde, <br type="lb" xml:id="tln_0113" n="113"/>And in our sight they three were taken vp <br type="lb" xml:id="tln_0114"
+                                n="114"/>By Fishermen of <span type="name">Corinth</span>, as we thought. <br type="lb" xml:id="tln_0115" n="115" rend="print_tln"/>At length another ship had seiz’d on vs, <br type="lb" xml:id="tln_0116" n="116"/>And knowing whom it was their hap to saue, <br type="lb" xml:id="tln_0117" n="117"/>Gaue healthfull welcome to their ship-wrackt guests, <br type="lb" xml:id="tln_0118" n="118"/>And would haue reft the Fishers of their prey, <br type="lb" xml:id="tln_0119" n="119"/>Had not their backe beene very slow of saile; <br type="lb" xml:id="tln_0120" n="120" rend="print_tln"/>And therefore homeward did they bend their course. <br type="lb" xml:id="tln_0121" n="121"/>Thus haue you heard me seuer’d from my blisse, <br type="lb" xml:id="tln_0122" n="122"/>That by misfortunes was my life prolong’d, <br type="lb" xml:id="tln_0123" n="123"/>To tell sad stories of my owne mishaps.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0124" n="124"/>
+                    <p type="sp" styleName="sp" who="#Salinus">
+                        <span type="speaker">Duke.</span>
+                        <g type="p">And for the sake of them thou sorrowest for, <br type="lb" xml:id="tln_0125" n="125" rend="print_tln"/>Doe me the fauour to dilate at full, <br type="lb" xml:id="tln_0126" n="126"/>What haue befalne of them and they till now.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0127" n="127"/>
+                    <p type="sp" styleName="sp" who="#Aegeon">
+                        <span type="speaker">Merch.</span>
+                        <g type="p">My yongest boy, and yet my eldest care, <br type="lb" xml:id="tln_0128" n="128"/>At eighteene yeeres became inquisitiue <br type="lb" xml:id="tln_0129" n="129"/>After his brother; and importun’d me <br type="lb" xml:id="tln_0130" n="130" rend="print_tln"/>That his attendant, so his case was like, <br type="lb" xml:id="tln_0131" n="131"/>Reft of his brother, but retain’d his name, <br type="lb" xml:id="tln_0132" n="132"/>Might beare him company in the quest of him: <br type="lb" xml:id="tln_0133" n="133"/>Whom whil’st I laboured of a loue to see, <br type="lb" xml:id="tln_0134" n="134"/>I hazarded the losse of whom I lou’d. <br type="lb" xml:id="tln_0135" n="135" rend="print_tln"/>Fiue Sommers haue I spent in farthest <span type="name">Greece</span>, <br type="lb" xml:id="tln_0136" n="136"/>Roming cleane through the bounds of <span type="name">Asia</span>, <br type="lb" xml:id="tln_0137" n="137"/>And coasting homeward, came to <span type="name">Ephesus</span>: <br type="lb" xml:id="tln_0138" n="138"/>Hopelesse to finde, yet loth to leaue vnsought <br type="lb" xml:id="tln_0139" n="139"/>Or that, or any place that
+                            harbours men: <br type="lb" xml:id="tln_0140" n="140" rend="print_tln"/>But heere must end the story of my life, <br type="lb" xml:id="tln_0141" n="141"/>And happy were I in my timelie death, <br type="lb" xml:id="tln_0142" n="142"/>Could all my trauells warrant me they liue.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0143" n="143"/>
+                    <p type="sp" styleName="sp" who="#Salinus">
+                        <span type="speaker">Duke.</span>
+                        <g type="p">Haplesse <span type="name">Egeon</span> whom the fates haue markt <br type="lb" xml:id="tln_0144" n="144"/>To beare the extremitie of dire mishap: <br type="lb" xml:id="tln_0145" n="145" rend="print_tln"/>Now trust me, were it not against our Lawes, <br type="lb" xml:id="tln_0146" n="146"/>Against my Crowne, my oath, my dignity, <br type="lb" xml:id="tln_0147" n="147"/>Which Princes would they may not disanull, <br type="lb" xml:id="tln_0148" n="148"/>My soule should sue as aduocate for thee: <br type="lb" xml:id="tln_0149" n="149"/>But though thou art adiudged to the death, <br type="lb" xml:id="tln_0150" n="150" rend="print_tln"/>And passed sentence may not be recal’d <br type="lb" xml:id="tln_0151" n="151"/>But to our honours great disparagement: <br type="lb" xml:id="tln_0152" n="152"/>Yet will I fauour thee in what I can; <br type="lb" xml:id="tln_0153" n="153"/>Therefore Marchant, Ile limit thee this day <br type="lb" xml:id="tln_0154" n="154"/>To seeke thy helpe by beneficiall helpe, <br type="lb" xml:id="tln_0155" n="155" rend="print_tln"/>Try all the friends thou hast in
+                                <span type="name">Ephesus</span>, <br type="lb" xml:id="tln_0156" n="156"/>Beg thou, or borrow, to make vp the summe, <br type="lb" xml:id="tln_0157" n="157"/>And liue: if no, then thou art doom’d to die: <br type="lb" xml:id="tln_0158" n="158"/>Iaylor, take him to thy custodie.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0159" n="159"/>
+                    <p type="sp" styleName="sp" who="#Jailor">
+                        <span type="speaker">Iaylor.</span>
+                        <g type="p">I will my Lord.</g>
+                    </p>
+
+                    <br type="lb" xml:id="tln_0160" n="160" rend="print_tln"/>
+                    <p type="sp" styleName="sp" who="#Aegeon">
+                        <span type="speaker">Merch.</span>
+                        <g type="p">Hopelesse and helpelesse doth <span type="name">Egean</span> wend, <br type="lb" xml:id="tln_0161" n="161"/>But to procrastinate his liuelesse end.</g>
+                    </p>
+                    <stage type="exit" rend="align(right)">Exeunt.</stage>
+
+                </div>
+            </div>
+
+
+            <br type="lb" xml:id="tln_1920" n="1920" rend="print_tln"/>
+            <trailer>FINIS.</trailer>
+
+        </div>
+    </div>
+
+
+
+</TextFlow>
