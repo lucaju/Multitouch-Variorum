@@ -6,8 +6,6 @@ package view {
 	import events.MtVEvent;
 	
 	import flash.display.Sprite;
-	import flash.net.URLLoader;
-	import flash.net.URLRequest;
 	
 	import model.CommentModel;
 	import model.CommentsModel;
@@ -16,26 +14,30 @@ package view {
 	
 	import view.util.scroll.Scroll;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class CommentsPanel extends AbstractPanel {
 		
-		//properties
-		private const _maxHeight:int = 450;
+		//****************** Properties ****************** ****************** ******************
+		protected const _maxHeight						:int	 = 450;
+	
+		protected var comment							:CommentItem;
 		
-		private var url:URLRequest;
-		private var loader:URLLoader;
+		protected var scrolling							:Boolean = false;
 		
-		private var container:Sprite;
-		private var containerMask:Sprite;
-		
-		private var comment:CommentItem;
-		
-		private var scroll:Scroll;
-		private var scrolling:Boolean = false;
-		
-		private var variationsCollections:Array;
+		protected var variationsCollections				:Array;
 		
 		
+		//****************** Constructor ****************** ****************** ******************
 		
+		/**
+		 * 
+		 * @param c
+		 * 
+		 */
 		public function CommentsPanel(c:IController) {
 			super(c);
 			
@@ -53,6 +55,14 @@ package view {
 	
 		}
 		
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
 		override protected function _complete(e:MtVEvent):void {
 			//remove preloader
 			super.removePreloader()
@@ -92,10 +102,17 @@ package view {
 			}
 			
 			testForScroll();
-			
-			
+				
 		}
 		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param contructor
+		 * @param diff
+		 * 
+		 */
 		override protected function testForScroll(contructor:Boolean = true, diff:Number = 0):void {
 			
 			if (container.height + diff > _maxHeight) {

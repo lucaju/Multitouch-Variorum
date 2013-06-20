@@ -2,41 +2,42 @@ package model {
 	
 	//imports
 	import events.MtVEvent;
-	
 	import flash.events.Event;
-	
 	import mvc.Observable;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class BaseTextModel extends Observable {
 		
-		//properties
-		private var baseTextXML:XML;
-		private var editionsCollection:Array;
+		//****************** Properties ****************** ****************** ******************
 		
+		protected var baseTextXML					:XML;
+		protected var editionsCollection			:Array;
+		
+		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		public function BaseTextModel() {
-			
-			super();
-			
+			super();	
 			this.name = "baseText";
 		}
 		
-		public function hasTextBase():Boolean {
-			return baseTextXML ? true : false;
-		}
 		
-		public function load():void {
-			var pTB:ProcessTextBase = new ProcessTextBase();
-			pTB.addEventListener(Event.COMPLETE, _processComplete);
-			pTB = null;
-		}
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
 		
-		public function loadEdition(value:int):void {
-			var pTB:ProcessTextBase = new ProcessTextBase(value);
-			pTB.addEventListener(Event.COMPLETE, _editionProcessComplete);
-			pTB = null;
-		}
-		
-		private function _editionProcessComplete(e:Event):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _editionProcessComplete(e:Event):void {
 			
 			if (!editionsCollection) {
 				editionsCollection = new Array();
@@ -48,11 +49,15 @@ package model {
 			
 			editionsCollection.push(data);
 			
-			
 			this.dispatchEvent(new MtVEvent(MtVEvent.COMPLETE,data));
 		}
 		
-		private function _processComplete(e:Event):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _processComplete(e:Event):void {
 			
 			baseTextXML = e.target.data;
 			
@@ -60,8 +65,40 @@ package model {
 			data.text = e.target.data;
 			data.editionID = e.target.editionID;
 			
-			
 			this.dispatchEvent(new MtVEvent(MtVEvent.COMPLETE,data));
+		}
+		
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public function hasTextBase():Boolean {
+			return baseTextXML ? true : false;
+		}
+		
+		/**
+		 * 
+		 * 
+		 */
+		public function load():void {
+			var pTB:ProcessTextBase = new ProcessTextBase();
+			pTB.addEventListener(Event.COMPLETE, _processComplete);
+			pTB = null;
+		}
+		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
+		public function loadEdition(value:int):void {
+			var pTB:ProcessTextBase = new ProcessTextBase(value);
+			pTB.addEventListener(Event.COMPLETE, _editionProcessComplete);
+			pTB = null;
 		}
 		
 	}

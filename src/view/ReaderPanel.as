@@ -10,7 +10,6 @@ package view {
 	import flash.display.DisplayObject;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import flash.events.TouchEvent;
 	import flash.events.TransformGestureEvent;
 	
 	import model.BaseTextModel;
@@ -21,19 +20,33 @@ package view {
 	import view.reader.Reader;
 	import view.reader.ReaderMenu;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class ReaderPanel extends AbstractPanel {
 		
-		//properties
-		private var w:int = 275;
-		private var h:int = 538;
-		private var _editionID:int;
+		//****************** Properties ****************** ****************** ******************
 		
-		private var infoBox:InfoBox
-		private var menu:ReaderMenu;
-		private var reader:Reader;
-		private var miniReaderViz:MiniReaderViz;												//Navvigation Panel
+		protected var w						:int = 275;
+		protected var h						:int = 538;
+		protected var _editionID			:int;
+		
+		protected var infoBox				:InfoBox
+		protected var menu					:ReaderMenu;
+		protected var reader				:Reader;
+		protected var miniReaderViz			:MiniReaderViz;						//Navvigation Panel
 		
 		
+		//****************** Contructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param c
+		 * @param editionID_
+		 * 
+		 */
 		public function ReaderPanel(c:IController, editionID_:int = 0) {
 			super(c);
 			
@@ -64,18 +77,73 @@ package view {
 			
 		}
 		
+		
+		//****************** GETTERS // SETTERS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get editionID():int {
 			return _editionID;
 		}
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set editionID(value:int):void {
 			_editionID = value;
 		}
 		
+		/**
+		 * 
+		 * @param valueW
+		 * @param valueH
+		 * 
+		 */
+		override public function setDimensions(valueW:Number, valueH:Number):void {
+			w = valueW;
+			h = valueH;
+		}
+		
+		
+		//****************** PRIVATE METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param obj
+		 * 
+		 */
+		private function killChild(obj:DisplayObject):void {
+			this.removeChild(obj);
+		}
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		protected function addEditionInfo():void {
+			infoBox = new InfoBox(this.getController(), true, editionID);
+			this.addChild(infoBox);
+		}
+		
+		protected function addMenu():void {
+			menu = new ReaderMenu(this);
+			//menu.scaleX = menu.scaleY = .8;
+			this.addChildAt(menu,0);
+		}
+		
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
 		override protected function _complete(e:MtVEvent):void {
-			
-			
-			
+
 			if (e.parameters.editionID == editionID) {
 				//remove preloader
 				super.removePreloader();	
@@ -115,37 +183,86 @@ package view {
 			
 		}
 		
-		private function _startDrag(e:MouseEvent):void {
-			this.startDrag();
-		}
-		
-		private function _stopDrag(e:MouseEvent):void {
-			this.stopDrag();
-		}
-		
-		private function readerScrolling(e:Event):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function readerScrolling(e:Event):void {
 			miniReaderViz.updateScrollPosition(reader.scrollPosition)	
 		}
 		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _rotate(e:TransformGestureEvent):void {
+			this.rotation += e.rotation;
+		}
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _startDrag(e:MouseEvent):void {
+			this.startDrag();
+		}
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _stopDrag(e:MouseEvent):void {
+			this.stopDrag();
+		}
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _rollOver(e:MouseEvent):void {
+			TweenMax.to(menu, .5, {autoAlpha:1, y:0});
+		}
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _rollOut(e:MouseEvent):void {
+			TweenMax.to(menu, .5, {autoAlpha:0, y:menu.height + 10});
+		}
+		
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function getScrollReader(value:Number):void {
 			reader.scrollPosition = Math.round(value);
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function getReaderHeight():Number {
 			return reader.getFlowHeight();;
 		}
 		
-		private function addEditionInfo():void {
-			infoBox = new InfoBox(this.getController(), true, editionID);
-			this.addChild(infoBox);
-		}
-		
-		private function addMenu():void {
-			menu = new ReaderMenu(this);
-			//menu.scaleX = menu.scaleY = .8;
-			this.addChildAt(menu,0);
-		}
-		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function showNav(value:Boolean):void {
 			
 			if (value) {
@@ -165,41 +282,41 @@ package view {
 	
 		}
 		
-		private function killChild(obj:DisplayObject):void {
-			this.removeChild(obj);
-		}
-		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function showVariants(value:Boolean):void {
 			reader.showVariations(value);	
 		}
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function showLineNumber(value:Boolean):void {
 			reader.showLineNumbers(value);	
 		}
 		
-		override public function setDimensions(valueW:Number, valueH:Number):void {
-			w = valueW;
-			h = valueH;
-		}
-		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function getPlainTextLength():int {
 			return reader.getPlainText().length;
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function getNotes():Array {
 			return reader.getVarPositions();
 		}
 		
-		private function _rotate(e:TransformGestureEvent):void {
-			this.rotation += e.rotation;
-		}
-		
-		private function _rollOver(e:MouseEvent):void {
-			TweenMax.to(menu, .5, {autoAlpha:1, y:0});
-		}
-		
-		private function _rollOut(e:MouseEvent):void {
-			TweenMax.to(menu, .5, {autoAlpha:0, y:menu.height + 10});
-		}
 	}
 }

@@ -6,44 +6,59 @@ package model {
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
 	
-	import flashx.textLayout.elements.TextFlow;
+	//import flashx.textLayout.elements.TextFlow;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class ProcessTextBase extends EventDispatcher {
 		
-		private var url:URLRequest;
-		private var urlLoader:URLLoader;
+		//****************** Properties ****************** ****************** ******************
 		
-		public var data:XML;
-		public var editionID:int;
-		private var textFlow:TextFlow;
-		private var _plainTex:String;
+		public var data					:XML;
+		public var editionID			:int;
 		
-		//constructor
+		//protected var textFlow			:TextFlow;
+		//protected var _plainTex			:String;
+		
+		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param _editionID
+		 * 
+		 */
 		public function ProcessTextBase(_editionID:int = 0) {
 			
 			editionID = _editionID;
 			
 			//---------get textbase
+			var url:URLRequest = new URLRequest();
 			//url = new URLRequest("http://labs.fluxo.art.br/mtv/getPlayTextXML.php");
 			url = new URLRequest("http://labs.fluxo.art.br/mtv/getPlayTextWithVariationsXML.php?e="+editionID);
 			
-			urlLoader = new URLLoader();
+			var urlLoader:URLLoader = new URLLoader();
 			urlLoader.addEventListener(Event.COMPLETE, onComplete);
 			urlLoader.load(url);
-			
 			
 			XML.ignoreWhitespace = false;
 			
 		}
 		
-		private function onComplete(e:Event):void {
-			
-			//complete
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function onComplete(e:Event):void {
 			data = XML(e.target.data);
 			this.dispatchEvent(new Event(Event.COMPLETE));
-			
-			//trace (data)
-
 		}
 
 	}

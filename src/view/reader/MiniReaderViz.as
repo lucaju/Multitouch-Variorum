@@ -9,80 +9,55 @@ package view.reader {
 	
 	import view.ReaderPanel;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class MiniReaderViz extends Sprite {
 		
-		//properties
-		private var _target:ReaderPanel
+		//****************** Properties ****************** ****************** ******************
 		
-		private var plainTextLength:int;											//store text length in character number
-		private var positions:Array;												//store refrence positions
+		protected var _target				:ReaderPanel
 		
-		private var viz:Sprite;
+		protected var plainTextLength		:int;				//store text length in character number
+		protected var positions				:Array;				//store refrence positions
 		
-		private var chunkCollection:Array;											//store chunks
-		private var chunk:Shape;													//iterate chunk
+		protected var viz					:Sprite;
 		
-		private var _hMax:int = 560;												//max height
-		private var _wMax:int = 33;													//max width
-		private var _numColumns:int = 1;											//number of columns
+		protected var chunkCollection		:Array;				//store chunks
+		protected var chunk					:Shape;				//iterate chunk
 		
-		private var lineWeight:Number = 1;											//line weigth
-		private var columnGap:int = 5;												//gap between columns
+		protected var _hMax					:int	 = 560;		//max height
+		protected var _wMax					:int	 = 33;		//max width
+		protected var _numColumns			:int	 = 1;		//number of columns
+		
+		protected var lineWeight			:Number	 = 1;		//line weigth
+		protected var columnGap				:int	 = 5;		//gap between columns
 			
-		private var pixRate:Number;													//pixelrate - store the sample rate based in the text length and the max parameters
+		protected var pixRate				:Number;			//pixelrate - store the sample rate based in the text length and the max parameters
 		
-		private var generalColor:uint = 0xCCCCCC;
-		private var highlightColor:uint = 0xFFFF00;
+		protected var generalColor			:uint	 = 0xCCCCCC;
+		protected var highlightColor		:uint	 = 0xFFFF00;
 		
-		private var animation:Boolean = true;
+		protected var animation				:Boolean = true;
 		
-		private var scrollBar:ReaderScrollBar;
+		protected var scrollBar				:ReaderScrollBar;
 		
+		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param target_
+		 * 
+		 */
 		public function MiniReaderViz(target_:ReaderPanel) {
-			
 			_target = target_;
-
 		}
 		
-		// ------------- GETTERS AND SETTERS
 		
-		public function get target():ReaderPanel {
-			return _target;
-		}
-		
-		public function set target(value:ReaderPanel):void {
-			_target = value;
-		}
-		
-		public function get numColumns():int {
-			return _numColumns;
-		}
-
-		public function set numColumns(value:int):void {
-			_numColumns = value;
-		}
-
-		public function get wMax():int {
-			return _wMax;
-		}
-
-		public function set wMax(value:int):void {
-			_wMax = value;
-		}
-
-		public function get hMax():int {
-			return _hMax;
-		}
-
-		public function set hMax(value:int):void {
-			_hMax = value;
-		}
-		
-		public function get numLines():int {
-			return Math.floor(hMax/2);
-		}
-		
-		//--------- METHODS
+		//****************** INITIALIZE ****************** ****************** ******************
 		
 		public function initialize():void {
 			
@@ -96,12 +71,108 @@ package view.reader {
 			
 		}
 		
+		
+		//****************** GETTERS // SETTERS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public function get target():ReaderPanel {
+			return _target;
+		}
+		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
+		public function set target(value:ReaderPanel):void {
+			_target = value;
+		}
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public function get numColumns():int {
+			return _numColumns;
+		}
+
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
+		public function set numColumns(value:int):void {
+			_numColumns = value;
+		}
+
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public function get wMax():int {
+			return _wMax;
+		}
+
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
+		public function set wMax(value:int):void {
+			_wMax = value;
+		}
+
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public function get hMax():int {
+			return _hMax;
+		}
+
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
+		public function set hMax(value:int):void {
+			_hMax = value;
+		}
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public function get numLines():int {
+			return Math.floor(hMax/2);
+		}
+		
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function updateScrollPosition(value:Number):void {
 			scrollBar.update(value);
 		}
 			
-		//public function updateViz(notes:Array):void {
+		/**
+		 * 
+		 * 
+		 */
 		public function updateViz():void {
+		//public function updateViz(notes:Array):void {
 			
 			//clear previous
 			clear();
@@ -251,7 +322,25 @@ package view.reader {
 			
 		}
 		
-		private function playAnimation():void {
+		/**
+		 * 
+		 * 
+		 */
+		public function clear():void {
+			if (viz) {
+				this.removeChild(viz);
+				viz = null;
+				chunkCollection = null;
+			}
+		}
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
+		protected function playAnimation():void {
 			//animation
 			for (var i:int = 0; i < chunkCollection.length; i++) {
 				
@@ -271,16 +360,6 @@ package view.reader {
 				//TweenMax.from(chunkCollection[i],2,{width:0, delay:i *  0.2, ease:Back.easeOut});
 			}
 		}
-	
-		public function clear():void {
-			
-			if (viz) {
-				this.removeChild(viz);
-				viz = null;
-				chunkCollection = null;
-			}
 
-		}
-	
 	}
 }

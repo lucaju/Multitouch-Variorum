@@ -1,15 +1,25 @@
 package view.style {
 	
 	//imports
-	import flash.text.Font;
 	import flash.text.TextFormat;
 
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class TXTFormat {
 		
-		public function TXTFormat() {
-			
-		}
 		
+		//****************** STATIC PUBLIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param styleName
+		 * @param statusColor
+		 * @return 
+		 * 
+		 */
 		static public function getStyle(styleName:String = "standard", statusColor:String = "standard"):TextFormat {
 			
 			var style:TextFormat = new TextFormat();
@@ -18,8 +28,6 @@ package view.style {
 			style.leading = 2;
 			
 			switch (styleName) {
-				
-				
 				
 				//----------General ------------
 				

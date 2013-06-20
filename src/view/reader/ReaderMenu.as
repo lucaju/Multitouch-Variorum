@@ -6,16 +6,30 @@ package view.reader {
 	
 	import view.ReaderPanel;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class ReaderMenu extends Sprite {
 		
-		//properties
-		private var target:ReaderPanel;
-		private var bg:Sprite;
-		private var item:ReaderMenuItem;
-		private var itemCollection:Array = ["lineNumber", "variant", "reader_nav"];
+		//****************** Properties ****************** ****************** ******************
 		
-		private var margin:int = 3;
+		protected var target				:ReaderPanel;
+		protected var bg					:Sprite;
+		protected var item					:ReaderMenuItem;
+		protected var itemCollection		:Array = ["lineNumber", "variant", "reader_nav"];
 		
+		protected var margin				:int = 3;
+		
+		
+		//****************** Contructtor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param target_
+		 * 
+		 */
 		public function ReaderMenu(target_:ReaderPanel) {
 			
 			target = target_;
@@ -44,7 +58,15 @@ package view.reader {
 			
 		}
 		
-		private function _click(e:MouseEvent):void {
+		
+		//****************** PROTECTED EVETNS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _click(e:MouseEvent):void {
 			
 			item = ReaderMenuItem(e.currentTarget);
 			

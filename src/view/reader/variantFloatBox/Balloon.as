@@ -5,15 +5,23 @@ package view.reader.variantFloatBox {
 	import flash.filters.BitmapFilter;
 	import flash.filters.BitmapFilterQuality;
 	import flash.filters.GlowFilter;
-	import flash.geom.Rectangle;
 	
 	public class Balloon extends Sprite {
 		
-		//properties
-		private var balloon:Sprite;
+		//****************** Properties ****************** ****************** ******************
 		
-		private var round:Number = 10;						// Round corners
+		protected var balloon			:Sprite;
+		protected var round				:Number = 10;			// Round corners
 		
+		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param w
+		 * @param h
+		 * 
+		 */
 		public function Balloon(w:Number, h:Number) {
 			
 			super();
@@ -37,8 +45,17 @@ package view.reader.variantFloatBox {
 			
 		}
 		
-		// fx
-		private function getBitmapFilter(colorValue:uint, a:Number):BitmapFilter {
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+
+		/**
+		 * 
+		 * @param colorValue
+		 * @param a
+		 * @return 
+		 * 
+		 */
+		protected function getBitmapFilter(colorValue:uint, a:Number):BitmapFilter {
 			//propriedades
 			var color:Number = colorValue;
 			var alpha:Number = a;

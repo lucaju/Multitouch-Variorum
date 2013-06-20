@@ -17,21 +17,33 @@ package view {
 	import view.util.preloader.Preloader;
 	import view.util.scroll.Scroll;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class AbstractPanel extends AbstractView {
 		
-		//properties
-		protected var preloader:Preloader;
-		protected var window:Shape;
+		//****************** Properties ****************** ****************** ******************
 		
-		protected var scrollable:Boolean = false;
+		protected var preloader						:Preloader;
+		protected var window						:Shape;
 		
-		private var container:Sprite;
-		private var containerMask:BlitMask;
+		protected var scrollable					:Boolean = false;
 		
-		private var scroll:Scroll;
+		protected var container						:Sprite;
+		protected var containerMask					:Sprite;
+		
+		protected var scroll						:Scroll;
 		
 		
+		//****************** Constructor ****************** ****************** ******************
 		
+		/**
+		 * 
+		 * @param c
+		 * 
+		 */
 		public function AbstractPanel(c:IController) {
 			super(c);
 			
@@ -39,6 +51,14 @@ package view {
 			this.addEventListener(Event.ADDED_TO_STAGE, _added);
 		}
 		
+		
+		//****************** INITIALIZE ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param panelNamel
+		 * 
+		 */
 		public function init(panelNamel:String):void {
 			
 			//---------- Area Title ----------
@@ -52,10 +72,33 @@ package view {
 	
 		}
 		
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
 		protected function _added(e:Event):void {
-			
+			//to override
 		}
 		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _complete(e:MtVEvent):void {
+			//to override
+		}
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		protected function showWindow():void {
 			//border
 			window = new Shape();
@@ -67,28 +110,51 @@ package view {
 			this.addChildAt(window,0);
 		}
 		
+		/**
+		 * 
+		 * 
+		 */
 		protected function hideWindow():void {
 			window.graphics.clear();
 			this.removeChild(window);
 			window = null;
 		}
 		
-		protected function _complete(e:MtVEvent):void {
-			
-		}
-		
+		/**
+		 * 
+		 * @param valueW
+		 * @param valueH
+		 * 
+		 */
 		public function setDimensions(valueW:Number, valueH:Number):void {
-			
+			//to override
 		}
 		
+		/**
+		 * 
+		 * @param contructor
+		 * @param diff
+		 * 
+		 */
 		protected function testForScroll(contructor:Boolean = true, diff:Number = 0):void {
-			
+			//to override
 		}
 		
+		/**
+		 * 
+		 * 
+		 */
 		public function resize():void {
-			
+			//to override
 		}
 		
+		
+		//****************** INTERNAL METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		internal function addPreloader():void {
 			preloader = new Preloader();
 			preloader.start();
@@ -97,6 +163,10 @@ package view {
 			this.addChild(preloader);
 		}
 		
+		/**
+		 * 
+		 * 
+		 */
 		internal function removePreloader():void {
 			if (preloader) {
 				this.removeChild(preloader);

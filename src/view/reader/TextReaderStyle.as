@@ -2,20 +2,28 @@ package view.reader {
 	
 	//imports
 	import flashx.textLayout.formats.TextLayoutFormat;
-	
 	import view.style.ColorSchema;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class TextReaderStyle {
 		
-		public function TextReaderStyle() {
-			
-		}
-		
+		//****************** STATIC PUBLIC METHODS ****************** ****************** ******************
+
+		/**
+		 * 
+		 * @param styleName
+		 * @param statusColor
+		 * @return 
+		 * 
+		 */
 		static public function getStyle(styleName:String, statusColor:String = "standard"):TextLayoutFormat {
 			
 			var style:TextLayoutFormat = new TextLayoutFormat();
-			
-			
+		
 			switch (styleName) {
 				
 				case "DefaultParagraph":
@@ -91,7 +99,6 @@ package view.reader {
 					break;
 				
 			}
-			
 		
 			return style;
 		}

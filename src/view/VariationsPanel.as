@@ -2,8 +2,6 @@ package view {
 	
 	//imports
 	import flash.display.Sprite;
-	import flash.net.URLLoader;
-	import flash.net.URLRequest;
 	
 	import controller.MtVController;
 	
@@ -16,26 +14,30 @@ package view {
 	
 	import view.util.scroll.Scroll;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class VariationsPanel extends AbstractPanel {
 		
-		//properties
-		private const _maxHeight:int = 450;
+		//****************** Properties ****************** ****************** ******************
+		protected const _maxHeight							:int	 = 450;
 		
-		private var url:URLRequest;
-		private var loader:URLLoader;
+		protected var variation								:VariationItem;
 		
-		private var container:Sprite;
-		private var containerMask:Sprite;
+		protected var scrolling								:Boolean = false;
 		
-		private var variation:VariationItem;
-		
-		private var scroll:Scroll;
-		private var scrolling:Boolean = false;
-		
-		private var variationsCollections:Array;
+		protected var variationsCollections					:Array;
 		
 		
+		//****************** Constructor ****************** ****************** ******************
 		
+		/**
+		 * 
+		 * @param c
+		 * 
+		 */
 		public function VariationsPanel(c:IController) {
 			super(c);
 			
@@ -53,6 +55,14 @@ package view {
 	
 		}
 		
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
 		override protected function _complete(e:MtVEvent):void {
 			//remove preloader
 			super.removePreloader();
@@ -95,6 +105,15 @@ package view {
 			
 		}
 		
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param contructor
+		 * @param diff
+		 * 
+		 */
 		override protected function testForScroll(contructor:Boolean = true, diff:Number = 0):void {
 			
 			if (container.height + diff > _maxHeight) {
@@ -113,7 +132,7 @@ package view {
 				containerMask.graphics.drawRect(container.x,container.y,this.width,_maxHeight);
 				this.addChild(containerMask);
 				container.mask = containerMask
-					//containerMask = new BlitMask(container, container.x, container.y, this.width, _maxHeight, true);
+				//containerMask = new BlitMask(container, container.x, container.y, this.width, _maxHeight, true);
 				
 				//add scroll system
 				scroll = new Scroll();

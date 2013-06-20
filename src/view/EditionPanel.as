@@ -6,8 +6,6 @@ package view {
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import flash.net.URLLoader;
-	import flash.net.URLRequest;
 	
 	import controller.MtVController;
 	
@@ -24,27 +22,32 @@ package view {
 	
 	import util.DeviceInfo;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class EditionPanel extends AbstractPanel {
 		
-		//properties
-		private var _maxWidth:int = 800;
+		//****************** Properties ****************** ****************** ******************
+		protected var _maxWidth						:int	 = 800;
 		
-		private var url:URLRequest;
-		private var loader:URLLoader;
+		protected var scrollBg						:Sprite;
 		
-		private var container:Sprite;
-		//private var containerMask:BlitMask;
-		private var containerMask:Sprite;
+		protected var edition						:Edition;
 		
-		private var scrollBg:Sprite;
+		protected var scrolling						:Boolean = false;
 		
-		private var edition:Edition;
+		protected var editionsCollection			:Array;
 		
-		private var scroll:Scroll;
-		private var scrolling:Boolean = false;
 		
-		private var editionsCollection:Array;
+		//****************** Constructor ****************** ****************** ******************
 		
+		/**
+		 * 
+		 * @param c
+		 * 
+		 */
 		public function EditionPanel(c:IController) {
 			super(c);
 			
@@ -61,10 +64,16 @@ package view {
 			m.addEventListener(MtVEvent.COMPLETE, _complete);
 			
 			container = new Sprite();
-			
-	
 		}
 		
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
 		override protected function _added(e:Event):void {
 			//define area
 			if (DeviceInfo.os() != "Mac") {
@@ -75,8 +84,12 @@ package view {
 			
 		}
 		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
 		override protected function _complete(e:MtVEvent):void {
-			
 			
 			//remove preloader
 			super.removePreloader();
@@ -134,7 +147,12 @@ package view {
 			
 		}
 		
-		private function _editionClick(e:MouseEvent):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _editionClick(e:MouseEvent):void {
 			edition = Edition(e.currentTarget);
 			
 			var obj:Object = {editionID:edition.id}
@@ -142,7 +160,12 @@ package view {
 			this.dispatchEvent(new MtVEvent(MtVEvent.SELECT,obj));
 		}
 		
-		private function _variationsLoaded(e:MtVEvent):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _variationsLoaded(e:MtVEvent):void {
 			
 			var variations:Array = MtVController(this.getController()).getVariationsByEdition();
 			
@@ -153,7 +176,15 @@ package view {
 			
 		}
 		
-		private function setVariationLevel(variations:Array):void {
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param variations
+		 * 
+		 */
+		protected function setVariationLevel(variations:Array):void {
 			
 			var numVars:int;
 			
@@ -176,6 +207,12 @@ package view {
 			
 		}
 		
+		/**
+		 * 
+		 * @param contructor
+		 * @param diff
+		 * 
+		 */
 		override protected function testForScroll(contructor:Boolean = true, diff:Number = 0):void {
 			
 			if (container.width + diff > _maxWidth) {
@@ -227,7 +264,14 @@ package view {
 			}
 			
 		}
+		
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
 	
+		/**
+		 * 
+		 * 
+		 */
 		override public function resize():void {
 			
 			_maxWidth = stage.stageWidth - this.x - 10;

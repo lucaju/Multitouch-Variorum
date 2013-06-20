@@ -1,5 +1,6 @@
 package view.reader {
 	
+	//imports
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -20,33 +21,53 @@ package view.reader {
 	
 	import view.reader.variantFloatBox.VariantFloatBox;
 	
-	
+	//namespace
 	use namespace tlf_internal;
 
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class Reader extends Sprite {
 		
-		//properties
-		private var readerFlow:TextFlow;
-		private var container:Sprite;
-		private var containerController:ContainerController;
+		//****************** Properties ****************** ****************** ******************
 		
-		private var border:Shape;
+		protected var readerFlow				:TextFlow;
+		protected var container					:Sprite;
+		protected var containerController		:ContainerController;
 		
-		private var w:int = 375;
-		private var h:int = 450;
+		protected var border					:Shape;
+		
+		protected var w							:int = 375;
+		protected var h							:int = 450;
 			
-		private var marginW:uint = 10;
-		private var marginH:uint = 3;
+		protected var marginW					:uint = 10;
+		protected var marginH					:uint = 3;
 		
-		private var variantFloatBox:VariantFloatBox;	
+		protected var variantFloatBox			:VariantFloatBox;	
 		
+		
+		//****************** Contructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		public function Reader():void {
 			
 		}
 		
+		
+		//****************** INITIALIZE ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param data
+		 * 
+		 */
 		public function init(data:XML):void {
-			
 			
 			// --- Textflow
 			// To built one you have 2 options
@@ -169,18 +190,48 @@ package view.reader {
 			
 		}
 		
-		private function _onReaderScroll(e:TextLayoutEvent):void {
-			this.dispatchEvent(new Event(Event.SCROLL));
-		}
 		
+		//****************** GETTERS // SETTERS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set scrollPosition(value:int):void {
 			containerController.verticalScrollPosition = value;
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get scrollPosition():int {
 			return containerController.verticalScrollPosition;
 		}
 		
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _onReaderScroll(e:TextLayoutEvent):void {
+			this.dispatchEvent(new Event(Event.SCROLL));
+		}
+		
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param show
+		 * @param split
+		 * 
+		 */
 		public function showLineNumbers(show:Boolean = true, split:uint = 5):void {
 			var spans:Array = readerFlow.getElementsByStyleName("LineNumber");
 			
@@ -211,6 +262,11 @@ package view.reader {
 			readerFlow.flowComposer.updateAllControllers();
 		}
 		
+		/**
+		 * 
+		 * @param show
+		 * 
+		 */
 		public function showVariations(show:Boolean = true):void {
 			
 			//stage.addEventListener(FlowElementMouseEvent.MOUSE_UP,mouseUp);
@@ -239,6 +295,11 @@ package view.reader {
 			readerFlow.flowComposer.updateAllControllers();
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function getVarPositions():Array {
 			
 			var pos:Object;
@@ -257,15 +318,30 @@ package view.reader {
 			return varPos;
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function getFlowHeight():Number {
 			return containerController.getContentBounds().height;
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function getPlainText():String {
 			var outString:String = TextConverter.export(readerFlow,TextConverter.PLAIN_TEXT_FORMAT, ConversionType.STRING_TYPE) as String;
 			return outString;
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function getTextAsXML():XML {
 			var outXML:XML = TextConverter.export(readerFlow,TextConverter.TEXT_LAYOUT_FORMAT, ConversionType.XML_TYPE) as XML;
 			return outXML;
@@ -281,10 +357,9 @@ package view.reader {
 			var mirror:IEventDispatcher = span.getEventMirror();
 			mirror.addEventListener(FlowElementMouseEvent.MOUSE_MOVE,mouseMove);
 			
-			readerFlow.interactionManager = null;;
+			readerFlow.interactionManager = null;
 			
 			/*
-			
 			
 			variantFloatBox = new VariantFloatBox();
 			
@@ -307,6 +382,13 @@ package view.reader {
 			//trace (e.originalEvent.toString());
 		}
 		
+		//****************** PUBLIC EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
 		public function mouseUp(e:FlowElementMouseEvent):void {
 			
 			var span:SpanElement = e.flowElement as SpanElement;
@@ -326,6 +408,11 @@ package view.reader {
 			*/
 		}
 		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
 		public function mouseMove(e:FlowElementMouseEvent):void {
 			trace (">>>>>>>>>>>>>>>>")
 		}

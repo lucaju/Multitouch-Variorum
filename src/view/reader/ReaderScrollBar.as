@@ -8,39 +8,40 @@ package view.reader {
 	
 	import view.ReaderPanel;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class ReaderScrollBar extends Sprite {
 		
-		//properties
-		private var scrollThumb:Sprite;
+		//****************** Properties ****************** ****************** ******************
 		
-		private var _target:ReaderPanel;
-		private var _track:MiniReaderViz;
+		protected var scrollThumb			:Sprite;
 		
-		private var rate:Number;
+		protected var _target				:ReaderPanel;
+		protected var _track				:MiniReaderViz;
+		
+		protected var rate					:Number;
 		
 		
+		//****************** Properties ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		public function ReaderScrollBar() {
-			
 			super();
-			
 		}
 		
-		public function get target():ReaderPanel {
-			return _target;
-		}
 		
-		public function set target(value:ReaderPanel):void {
-			_target = value;
-		}
+		//****************** INITIALIZE ****************** ****************** ******************
 		
-		public function get track():MiniReaderViz {
-			return _track;
-		}
-		
-		public function set track(value:MiniReaderViz):void {
-			_track = value;
-		}
-		
+		/**
+		 * 
+		 * 
+		 */
 		public function initialize():void {
 			
 			//get reader and track height
@@ -64,10 +65,56 @@ package view.reader {
 			
 			//recalculate rate
 			rate = h/(hMax+scrollThumb.height);
-
+			
 		}
+		
+		//****************** GETTERS // SETTERS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public function get target():ReaderPanel {
+			return _target;
+		}
+		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
+		public function set target(value:ReaderPanel):void {
+			_target = value;
+		}
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public function get track():MiniReaderViz {
+			return _track;
+		}
+		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
+		public function set track(value:MiniReaderViz):void {
+			_track = value;
+		}
+		
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
 
-		private function _startDrag(e:MouseEvent):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _startDrag(e:MouseEvent):void {
 			
 			var limit:Rectangle = new Rectangle(0,0,0,track.height-scrollThumb.height + 7);
 			scrollThumb.startDrag(false,limit);
@@ -79,11 +126,21 @@ package view.reader {
 			scrollThumb.addEventListener(MouseEvent.MOUSE_OUT, _stopDrag);
 		}
 		
-		private function _update(e:Event):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _update(e:Event):void {
 			target.getScrollReader(scrollThumb.y * rate);
 		}
 		
-		private function _stopDrag(e:MouseEvent):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _stopDrag(e:MouseEvent):void {
 			scrollThumb.stopDrag();
 			
 			scrollThumb.addEventListener(MouseEvent.MOUSE_DOWN, _startDrag);
@@ -92,6 +149,9 @@ package view.reader {
 			scrollThumb.removeEventListener(MouseEvent.MOUSE_UP, _stopDrag);
 			scrollThumb.removeEventListener(MouseEvent.MOUSE_OUT, _stopDrag);
 		}
+		
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
 		
 		public function update(value:int):void {
 			scrollThumb.y = value/rate;

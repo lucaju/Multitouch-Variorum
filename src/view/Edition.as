@@ -11,21 +11,30 @@ package view {
 	
 	public class Edition extends Sprite {
 		
-		//properties
-		private var _id:int;
-		private var _title:String;
-		private var _author:String;
-		private var _abreviation:String;
-		private var _date:String;
+		//****************** Properties ****************** ****************** ******************
 		
-		private var barH:Number = 70;
+		protected var _id						:int;
+		protected var _title					:String;
+		protected var _author					:String;
+		protected var _abreviation				:String;
+		protected var _date						:String;
 		
-		private var shape:Sprite;
-		private var varLevel:Sprite;
-		private var _variationLevel:Number; 
+		protected var barH						:Number = 70;
 		
-		private var toolTip:ToolTip;	
+		protected var shape						:Sprite;
+		protected var varLevel					:Sprite;
+		protected var _variationLevel			:Number; 
 		
+		protected var toolTip					:ToolTip;
+		
+		
+		//****************** Contructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param id_
+		 * 
+		 */
 		public function Edition(id_:int) {
 			super();
 			
@@ -38,16 +47,28 @@ package view {
 			shape.graphics.drawRect(0,0,10, barH);
 			shape.graphics.endFill();
 			addChild(shape);
-			
 		}
 		
+		
+		//****************** Contructor ****************** ****************** ******************
+	
+		/**
+		 * 
+		 * 
+		 */
 		public function init():void {
-			
-			//interaction
 			this.buttonMode = true;
 		}
 		
-		private function addVariationViz(value:Number):void {
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
+		protected function addVariationViz(value:Number):void {
 			varLevel = new Sprite();
 			varLevel.graphics.beginFill(0xFFFFFF);
 			varLevel.graphics.drawRect(0,0,10, barH);
@@ -60,11 +81,13 @@ package view {
 			
 			this.addEventListener(MouseEvent.MOUSE_OVER, _over);
 			this.addEventListener(MouseEvent.MOUSE_OUT, _out);
-			
 		}
 		
 		
-		private function _over(e:MouseEvent):void {
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		protected function _over(e:MouseEvent):void {
 			TweenMax.to(varLevel,.5,{scaleY:0,alpha:0});
 			
 			toolTip = new ToolTip();
@@ -85,7 +108,7 @@ package view {
 			
 		}
 		
-		private function _out(e:MouseEvent):void {
+		protected function _out(e:MouseEvent):void {
 			TweenMax.to(varLevel,.5,{scaleY:variationLevel * 0.01,alpha:.7});
 			
 			if (toolTip) {
@@ -95,48 +118,103 @@ package view {
 		}
 		
 		
-		//---------GETTERS // SETTERS
+		//****************** GETTERS // SETTERS ****************** ****************** ******************
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get id():int {
 			return _id;
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get title():String {
 			return _title;
 		}
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set title(value:String):void {
 			_title = value;
 		}
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get author():String {
 			return _author;
 		}
 		
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set author(value:String):void {
 			_author = value;
 		}
 
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get abreviation():String {
 			return _abreviation;
 		}
 
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set abreviation(value:String):void {
 			_abreviation = value;
 		}
 
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get date():String {
 			return _date;
 		}
 
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set date(value:String):void {
 			_date = value;
 		}
 
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get variationLevel():Number {
 			return _variationLevel;
 		}
 
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set variationLevel(value:Number):void {
 			_variationLevel = value;
 			
@@ -144,7 +222,6 @@ package view {
 				addVariationViz(value)
 			}
 		}
-
 
 	}
 }

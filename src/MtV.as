@@ -13,6 +13,8 @@ package {
 	import model.MtVInterfaceModel;
 	import model.VariationsModel;
 	
+	import settings.Settings;
+	
 	import util.DeviceInfo;
 	import util.Global;
 	
@@ -22,24 +24,30 @@ package {
 	//[SWF(width="1920", height="1080", backgroundColor="#ffffff", frameRate="30")]
 	//[SWF(width="1920", height="1030", backgroundColor="#ffffff", frameRate="30")]
 	
-	
 	public class MtV extends Sprite {
 		
-		//properties
-		private var mtVInterfaceModel:MtVInterfaceModel;	//Model
-		private var baseTextModel:BaseTextModel;			//Model
-		private var editionsModel:EditionsModel;			//Model
-		private var variatonsModel:VariationsModel;			//Model
-		private var commentsModel:CommentsModel;			//Model
+		//****************** Properties ****************** ****************** ******************
+		protected var mtVInterfaceModel				:MtVInterfaceModel; 		//Model
+		protected var baseTextModel					:BaseTextModel;				//Model
+		protected var editionsModel					:EditionsModel;				//Model
+		protected var variatonsModel				:VariationsModel;			//Model
+		protected var commentsModel					:CommentsModel;				//Model
 		
-		private var mtvController:MtVController;			//Controller
+		protected var mtvController					:MtVController;				//Controller
 		
-		private var mtvView:MtVView;						//View
+		protected var mtvView						:MtVView;					//View
+		
+		protected var configure						:Settings;					//Settings
+		
+		//****************** Constructor ****************** ****************** ******************
 		
 		public function MtV() {
 			
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
+			
+			//settings
+			setting();
 			
 			//global
 			Global.globalWidth = stage.stageWidth;
@@ -62,13 +70,26 @@ package {
 			
 			trace (DeviceInfo.os())
 			
-			if (DeviceInfo.os() != "Mac") {
+			if (Settings.platformTarget == "mobile") {
 				mtvView.scaleX = mtvView.scaleY = 2;
 			}
 			
 			//debug stat
 			//addChild(new Stats());
 			
+		}
+		
+		//****************** PRIVATE METHODS ****************** ****************** ****************** 
+		
+		/**
+		 * 
+		 * 
+		 */
+		private function setting():void {
+			configure = new Settings();
+			//default values
+			Settings.platformTarget = "air";
+			Settings.debug = false;
 		}
 		
 	}

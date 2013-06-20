@@ -2,7 +2,6 @@ package view {
 	
 	//imports
 	import flash.display.Shape;
-	import flash.display.Sprite;
 	import flash.text.TextField;
 	
 	import mvc.IController;
@@ -10,17 +9,37 @@ package view {
 	import view.AbstractPanel;
 	import view.style.TXTFormat;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	final public class Header extends AbstractPanel {
 		
-		//properties
-		private var bg:Shape;
+		//****************** Properties ****************** ****************** ******************
 		
+		protected var bg			:Shape;
+		
+		
+		//****************** Contructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param c
+		 * 
+		 */
 		public function Header(c:IController) {
 			super(c);
-			
 			//super.init("TopBar");
 		}
 		
+		
+		//****************** Initialize ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		public function initialize():void {
 			
 			//---------- Background ----------
@@ -46,6 +65,13 @@ package view {
 			addChild(title);
 		}
 		
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		override public function resize():void {
 			bg.width = stage.stageWidth;
 		}

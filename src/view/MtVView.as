@@ -21,30 +21,34 @@ package view {
 	
 	public class MtVView extends AbstractView {
 		
-		//properties
-		static public var MTVController:MtVController										//controller
+		//****************** Properties ****************** ****************** ******************
+		static public var MTVController				:MtVController					//controller
 		
-		private var initialSize:Point;
+		protected var initialSize					:Point;
 		
-		//graphic layout slots
-		private var bg:Sprite;																		//Background
+		protected var bg							:Sprite;						//Background
 		
-		private var header:Header;																	//Header Panel
-		private var infoBox:InfoBox;																//Info Box Panel
-		private var readerPanel:ReaderPanel;														//Reader Panel
-		private var editionPanel:EditionPanel;														//Editions Panel
-		private var variationPanel:VariationsPanel;													//Variations Panel
-		private var commentsPanel:CommentsPanel;													//Comment Panel
-		private var navigationPanel:MiniReaderViz;												//Navvigation Panel
+		protected var header						:Header;						//Header Panel
+		protected var infoBox						:InfoBox;						//Info Box Panel
+		protected var readerPanel					:ReaderPanel;					//Reader Panel
+		protected var editionPanel					:EditionPanel;					//Editions Panel
+		protected var variationPanel				:VariationsPanel;				//Variations Panel
+		protected var commentsPanel					:CommentsPanel;					//Comment Panel
+		protected var navigationPanel				:MiniReaderViz;					//Navvigation Panel
 		
-		private var panelsArray:Array;
+		protected var panelsArray					:Array;
 		
-		private var gap:int = 5;																	//gap between elements
-		private var posMainY:Number = 60;
+		protected var gap							:int 	= 5;					//gap between elements
+		protected var posMainY						:Number = 60;
+		
+		
+		//****************** Constructor ****************** ****************** ******************
 		
 		/**
-		 * Contructor
-		 **/
+		 * 
+		 * @param c
+		 * 
+		 */
 		public function MtVView(c:IController) {
 			
 			super(c);
@@ -54,31 +58,21 @@ package view {
 			
 			//Listeners
 			this.addEventListener(Event.ADDED_TO_STAGE, _added);
-			
 			this.addEventListener(MtVEvent.KILL, killEditionReader);
-			
-			
+				
 		}
 		
-		private function _added(e:Event):void {
-			
-			//listeners
-			stage.addEventListener(Event.RESIZE, _resize);
-			
-			//get screensize
-			initialSize = new Point(stage.stageWidth,stage.stageHeight);
-			
-		}
+		
+		//****************** INITIALIZE ****************** ****************** ******************
 		
 		/**
-		 * Initialize
-		 **/
+		 * 
+		 * 
+		 */
 		public function initialize():void {
 			
 			//bg
 			bg = new Sprite();
-			
-			
 			bg.graphics.beginFill(0xAAAAAA);
 			bg.graphics.drawRect(0,0,stage.stageWidth, stage.stageHeight);
 			bg.graphics.endFill();
@@ -93,8 +87,6 @@ package view {
 			bg.addChild(loader);
 			
 			//Panels
-			
-			
 			panelsArray = new Array()
 			
 			//--------------header---------------
@@ -118,9 +110,7 @@ package view {
 			//--------------Editions---------------
 			//add Editions to the main view
 			editionPanel = new EditionPanel(this.getController());
-			
 			editionPanel.x = infoBox.x + infoBox.width + 30;
-			
 			editionPanel.y = 50;
 			
 			this.addChild(editionPanel);
@@ -161,10 +151,33 @@ package view {
 			this.addChild(commentsPanel);
 			
 			panelsArray.push(commentsPanel);
-
+			
 		}
 		
-		private function addEditionReader(e:MtVEvent):void {
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _added(e:Event):void {
+			
+			//listeners
+			stage.addEventListener(Event.RESIZE, _resize);
+			
+			//get screensize
+			initialSize = new Point(stage.stageWidth,stage.stageHeight);
+			
+		}
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function addEditionReader(e:MtVEvent):void {
 				
 			var editionID:int = e.parameters.editionID;
 			
@@ -190,7 +203,12 @@ package view {
 			
 		}
 		
-		private function killEditionReader(e:MtVEvent):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function killEditionReader(e:MtVEvent):void {
 			
 			var id:int = e.parameters.editionID;
 			readerPanel = null;
@@ -210,7 +228,12 @@ package view {
 			}
 		}
 		
-		private function _resize(e:Event):void {
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _resize(e:Event):void {
 			
 			bg.graphics.clear();
 			bg.graphics.beginFill(0xAAAAAA);
@@ -228,10 +251,12 @@ package view {
 			}
 		}
 		
+		
+		//****************** PRIVATE METHODS ****************** ****************** ******************
+		
 		private function killChild(obj:DisplayObject):void {
 			this.removeChild(obj);
 		}
-		
 		
 	}
 }

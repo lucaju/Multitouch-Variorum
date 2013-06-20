@@ -5,20 +5,29 @@ package view.assets.tooltip {
 	import flash.filters.BitmapFilter;
 	import flash.filters.BitmapFilterQuality;
 	import flash.filters.GlowFilter;
-	import flash.geom.Rectangle;
 	
 	public class Balloon extends Sprite {
 		
-		//properties
-		private var balloon:Sprite;
+		//****************** Properties ****************** ****************** ******************
 		
-		private var round:Number = 10;						// Round corners
+		protected var balloon			:Sprite;
 		
-		private var arrow:Sprite;
-		private var arrowDirection:String = "bottom";		// Arrow point direction	
-		private var arrowWidth:Number = 10;					// Balloon's arrow point width
-		private var arrowHeight:Number = 5;				// Balloon's arrow point height
+		protected var round				:Number = 10;				// Round corners
 		
+		protected var arrow				:Sprite;
+		protected var arrowDirection	:String = "bottom";			// Arrow point direction	
+		protected var arrowWidth		:Number = 10;				// Balloon's arrow point width
+		protected var arrowHeight		:Number = 5;				// Balloon's arrow point height
+		
+		
+		//****************** Contructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param w
+		 * @param h
+		 * 
+		 */
 		public function Balloon(w:Number, h:Number) {
 			
 			super();
@@ -53,22 +62,17 @@ package view.assets.tooltip {
 			
 		}
 		
-		public function changeOrientation(orient:String):void {
-			switch(orient) {
-				case "top":
-					arrow.scaleY = -1;
-					arrow.y = arrow.height/2;
-					balloon.y = arrow.y + arrow.height/2;
-					break;
-			}
-		}
 		
-		public function arrowOffsetH(offset:Number):void {
-			arrow.x += -offset;
-		}
+		//****************** PROTECTED METHODS ****************** ****************** ******************
 		
-		// fx
-		private function getBitmapFilter(colorValue:uint, a:Number):BitmapFilter {
+		/**
+		 * 
+		 * @param colorValue
+		 * @param a
+		 * @return 
+		 * 
+		 */
+		protected function getBitmapFilter(colorValue:uint, a:Number):BitmapFilter {
 			//propriedades
 			var color:Number = colorValue;
 			var alpha:Number = a;
@@ -79,5 +83,33 @@ package view.assets.tooltip {
 			
 			return new GlowFilter(color,alpha,blurX,blurY,strength,quality);
 		}
+		
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param orient
+		 * 
+		 */
+		public function changeOrientation(orient:String):void {
+			switch(orient) {
+				case "top":
+					arrow.scaleY = -1;
+					arrow.y = arrow.height/2;
+					balloon.y = arrow.y + arrow.height/2;
+					break;
+			}
+		}
+		
+		/**
+		 * 
+		 * @param offset
+		 * 
+		 */
+		public function arrowOffsetH(offset:Number):void {
+			arrow.x += -offset;
+		}
+		
 	}
 }

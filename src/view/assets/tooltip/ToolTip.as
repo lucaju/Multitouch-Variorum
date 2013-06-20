@@ -5,37 +5,38 @@ package view.assets.tooltip {
 	
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
-	import flash.events.TimerEvent;
-	import flash.filters.BitmapFilter;
-	import flash.filters.BitmapFilterQuality;
-	import flash.filters.GlowFilter;
 	import flash.geom.Point;
 	import flash.text.TextField;
 	import flash.text.TextFormat;
-	import flash.utils.Timer;
 	
 	import view.style.TXTFormat;
 	
 	public class ToolTip extends Sprite{	
 		
-		// properties
-		private var _id:int;							// Article's id
+		//****************** Properties ****************** ****************** ******************
+		
+		protected var _id				:int;						// Article's id
 
-		private var maxWidth:Number = 150;				// Balloon max width
-		private var minHeight:Number = 20;				// Balloom min height
-		private var round:Number = 10;					// Round corners
-		private var margin:Number = 2;					// Margin size
-		private var _arrowDirection:String = "bottom";	// Arrow point direction
+		protected var maxWidth			:Number = 150;				// Balloon max width
+		protected var minHeight			:Number = 20;				// Balloom min height
+		protected var round				:Number = 10;				// Round corners
+		protected var margin			:Number = 2;				// Margin size
+		protected var _arrowDirection	:String = "bottom";			// Arrow point direction
 
-		private var shapeBox:Balloon;					//Shape of the balloon;
+		protected var shapeBox			:Balloon;					//Shape of the balloon;
 		
-		private var titleTF:TextField;					// Title Textfield
-		private var titleStyle:TextFormat = new TextFormat("Arial Narrow", 12, 0x646363,true,null,null,null,null,"center");
+		protected var titleTF			:TextField;					// Title Textfield
+		protected var titleStyle		:TextFormat = new TextFormat("Arial Narrow", 12, 0x646363,true,null,null,null,null,"center");
 		
 		
-		//Constructor
+		//****************** Contructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param idValue
+		 * 
+		 */
 		public function ToolTip(idValue:int = 0) {
-			
 			//save properties
 			_id = idValue;
 			
@@ -43,6 +44,14 @@ package view.assets.tooltip {
 			this.mouseChildren = false;
 		}
 		
+		
+		//****************** INITIALIZE ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param data
+		 * 
+		 */
 		public function initialize(data:Object):void {
 			
 			var target:Sprite = data.target;
@@ -94,21 +103,38 @@ package view.assets.tooltip {
 			TweenMax.from(this,.5,{autoAlpha:0, y:this.y + 5});
 		}
 		
-		private function _closebutton(e:MouseEvent):void {
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _closebutton(e:MouseEvent):void {
 			//workflowController.killBalloon(id)
 		}
 		
 		
-		//------- gets
+		//****************** GETTERS // SETTERS ****************** ****************** ******************
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get id():int {	
 			return _id;
 		}
 
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get arrowDirection():String {
 			return _arrowDirection;
 		}
-
 
 	}
 }

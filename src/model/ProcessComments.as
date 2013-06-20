@@ -6,31 +6,47 @@ package model {
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class ProcessComments extends EventDispatcher {
 		
-		//properties
-		private var url:URLRequest;
-		private var urlLoader:URLLoader;
+		//****************** Properties ****************** ****************** ******************
 		
-		public var data:Array;
+		public var data				:Array;
 		
+		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		public function ProcessComments() {
 			
 			//---------get list info.
-			url = new URLRequest("http://labs.fluxo.art.br/mtv/getCommentsJSON.php");
-			urlLoader = new URLLoader();
+			var url:URLRequest = new URLRequest("http://labs.fluxo.art.br/mtv/getCommentsJSON.php");
+			var urlLoader:URLLoader = new URLLoader();
 			urlLoader.addEventListener(Event.COMPLETE, onComplete);
 			urlLoader.load(url);
-			
 		}
 		
-		private function onComplete(e:Event):void {
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function onComplete(e:Event):void {
 			var comments:Object = JSON.parse(e.target.data);
 				
 			//init
 			data = new Array();
 			var comment:CommentModel;
-			
 			
 			for each (var comm:Object in comments) {
 				
@@ -47,8 +63,6 @@ package model {
 				
 			}
 			
-			url = null;
-			urlLoader = null;
 			comment = null;
 			
 			this.dispatchEvent(new Event(Event.COMPLETE));

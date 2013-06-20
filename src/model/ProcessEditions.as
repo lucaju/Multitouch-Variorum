@@ -6,33 +6,49 @@ package model {
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class ProcessEditions extends EventDispatcher {
 		
-		//properties
-		private var url:URLRequest;
-		private var urlLoader:URLLoader;
-		
+		//****************** Properties ****************** ****************** ******************
+	
 		public var data:Array;
 		
+		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		public function ProcessEditions() {
 			
 			//---------get list info.
-			url = new URLRequest("http://labs.fluxo.art.br/mtv/getWitnessesJSON.php");
-			urlLoader = new URLLoader();
+			var url:URLRequest = new URLRequest("http://labs.fluxo.art.br/mtv/getWitnessesJSON.php");
+			var urlLoader:URLLoader = new URLLoader();
 			urlLoader.addEventListener(Event.COMPLETE, onComplete);
 			urlLoader.load(url);
 			
 		}
 		
-		private function onComplete(e:Event):void {
-			
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function onComplete(e:Event):void {
 			
 			var editions:Object = JSON.parse(e.target.data);
 				
 			//init
 			data = new Array();
 			var edition:EdModel;
-			
 			
 			for each (var ed:Object in editions) {
 				
@@ -46,8 +62,6 @@ package model {
 				
 			}
 			
-			url = null;
-			urlLoader = null;
 			edition = null;
 			
 			this.dispatchEvent(new Event(Event.COMPLETE));

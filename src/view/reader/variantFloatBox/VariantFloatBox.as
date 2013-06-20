@@ -5,37 +5,41 @@ package view.reader.variantFloatBox {
 	
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
-	import flash.events.TimerEvent;
-	import flash.filters.BitmapFilter;
-	import flash.filters.BitmapFilterQuality;
-	import flash.filters.GlowFilter;
 	import flash.geom.Point;
 	import flash.text.TextField;
 	import flash.text.TextFormat;
-	import flash.utils.Timer;
 	
-	import view.style.TXTFormat;
-	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class VariantFloatBox extends Sprite {	
 		
-		// properties
-		private var _id:int;							// Article's id
+		//****************** Properties ****************** ****************** ******************
+		
+		protected var _id					:int;						// Article's id
 
-		private var maxWidth:Number = 150;				// Balloon max width
-		private var minHeight:Number = 20;				// Balloom min height
-		private var round:Number = 10;					// Round corners
-		private var margin:Number = 2;					// Margin size
-		private var _arrowDirection:String = "bottom";	// Arrow point direction
+		protected var maxWidth				:Number = 150;				// Balloon max width
+		protected var minHeight				:Number = 20;				// Balloom min height
+		protected var round					:Number = 10;				// Round corners
+		protected var margin				:Number = 2;				// Margin size
+		protected var _arrowDirection		:String = "bottom";			// Arrow point direction
 
-		private var shapeBox:Balloon;					//Shape of the balloon;
+		protected var shapeBox				:Balloon;					//Shape of the balloon;
 		
-		private var titleTF:TextField;					// Title Textfield
-		private var titleStyle:TextFormat = new TextFormat("Arial Narrow", 12, 0xFFFFFF,true,null,null,null,null,"center");
+		protected var titleTF				:TextField;					// Title Textfield
+		protected var titleStyle			:TextFormat = new TextFormat("Arial Narrow", 12, 0xFFFFFF,true,null,null,null,null,"center");
 		
 		
-		//Constructor
-		public function VariantFloatBox(idValue:int = 0) {
-			
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param idValue
+		 * 
+		 */
+		public function VariantFloatBox(idValue:int = 0) {	
 			//save properties
 			_id = idValue;
 			
@@ -43,6 +47,14 @@ package view.reader.variantFloatBox {
 			this.mouseChildren = false;
 		}
 		
+		
+		//****************** INITIALIZE ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param data
+		 * 
+		 */
 		public function initialize(data:Object):void {
 			
 			var target:Sprite = data.target;
@@ -86,17 +98,29 @@ package view.reader.variantFloatBox {
 			TweenMax.from(this,.5,{autoAlpha:0, y:this.y + 5});
 		}
 		
-		private function _closebutton(e:MouseEvent):void {
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _closebutton(e:MouseEvent):void {
 			//workflowController.killBalloon(id)
 		}
 		
 		
-		//------- gets
+		//****************** GETTERS // SETTERS ****************** ****************** ******************
 		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get id():int {	
 			return _id;
 		}
-
 
 	}
 }

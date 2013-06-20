@@ -15,16 +15,32 @@ package view {
 	import view.assets.CrossBT;
 	import view.style.TXTFormat;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class InfoBox extends AbstractPanel {
 		
-		//properties
-		private var page:Sprite;
-		private var infoPage:TextField;
-		private var baseTextInfo:TextField;
-		private var editionInfo:EdModel;
-		private var closeBT:Sprite;
-		private var _editionID:int;
+		//****************** Properties ****************** ****************** ******************
 		
+		protected var page						:Sprite;
+		protected var infoPage					:TextField;
+		protected var baseTextInfo				:TextField;
+		protected var editionInfo				:EdModel;
+		protected var closeBT					:Sprite;
+		protected var _editionID				:int;
+		
+		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param c
+		 * @param reader
+		 * @param editionID
+		 * 
+		 */
 		public function InfoBox(c:IController, reader:Boolean = false, editionID:int = 0) {
 			super(c);
 			
@@ -62,7 +78,14 @@ package view {
 			
 		}
 		
-		private function loadBasetextInfo():void {
+		
+		//****************** PROTECTED METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
+		protected function loadBasetextInfo():void {
 			
 			//---------- Page ----------
 			page.graphics.beginFill(0xFFFFFF);
@@ -82,7 +105,12 @@ package view {
 			
 		}
 		
-		private function loadEditionInfo(editionID:int):void {
+		/**
+		 * 
+		 * @param editionID
+		 * 
+		 */
+		protected function loadEditionInfo(editionID:int):void {
 			
 			if (editionID != 0) {
 				//load close BT
@@ -115,15 +143,28 @@ package view {
 			page.graphics.beginFill(0xFFFFFF);
 			page.graphics.drawRect(0,0,infoPage.x + infoPage.width + 2,infoPage.height);
 			page.graphics.endFill();
-			
 		}
 		
-		private function _click(e:MouseEvent):void {
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _click(e:MouseEvent):void {
 			var data:Object = {editionID:editionID};
 			this.dispatchEvent(new MtVEvent(MtVEvent.KILL, data));
-			
 		}
 
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get editionID():int {
 			return _editionID;
 		}

@@ -6,14 +6,30 @@ package view.reader {
 	import flash.events.Event;
 	import flash.net.URLRequest;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class ReaderMenuItem extends Sprite {
 		
-		//properties
-		private var _type:String;
-		private var _size:int;
-		private var icon:Sprite;
-		private var _toggle:Boolean;
+		//****************** Properties ****************** ****************** ******************
 		
+		protected var _type			:String;
+		protected var _size			:int;
+		protected var icon			:Sprite;
+		protected var _toggle		:Boolean;
+		
+		
+		//****************** Contructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param type_
+		 * @param toggle_
+		 * @param size_
+		 * 
+		 */
 		public function ReaderMenuItem(type_:String, toggle_:Boolean = false, size_:int = 16) {
 			super();
 			
@@ -35,22 +51,53 @@ package view.reader {
 			toggle = toggle_;
 		}
 		
-		private function _complete(e:Event):void {
+		
+		//****************** PROTECTD EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * 
+		 */
+		protected function _complete(e:Event):void {
 			icon.addChild(e.currentTarget.content);
 		}
 
+		
+		//****************** GETTERS // SETTERS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get size():int {
 			return _size;
 		}
 
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set size(value:int):void {
 			_size = value;
 		}
 
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get toggle():Boolean {
 			return _toggle;
 		}
 
+		/**
+		 * 
+		 * @param value
+		 * 
+		 */
 		public function set toggle(value:Boolean):void {
 			_toggle = value;
 			
@@ -61,6 +108,11 @@ package view.reader {
 			}
 		}
 
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
 		public function get type():String {
 			return _type;
 		}
