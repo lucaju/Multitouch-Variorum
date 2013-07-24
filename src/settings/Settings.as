@@ -14,6 +14,7 @@ package settings {
 		//general
 		private static var _platformTarget				:String;			//["air","mobile","web", "table"]
 		private static var _debug						:Boolean;			//Debug
+		private static var _menuType					:String;			//["linear,circular,spiral"]
 		
 		
 		//****************** Constructor ****************** ****************** ******************
@@ -29,7 +30,7 @@ package settings {
 			//-- General
 			_platformTarget = "air";
 			_debug = false;
-			
+			_menuType = "linear";
 			
 		}
 		
@@ -46,6 +47,15 @@ package settings {
 		
 		/**
 		 * 
+		 * @param value
+		 * 
+		 */
+		public static function set platformTarget(value:String):void {
+			_platformTarget = value;
+		}
+		
+		/**
+		 * 
 		 * @return 
 		 * 
 		 */
@@ -58,18 +68,28 @@ package settings {
 		 * @param value
 		 * 
 		 */
-		public static function set platformTarget(value:String):void {
-			_platformTarget = value;
+		public static function set debug(value:Boolean):void {
+			_debug = value;
 		}
-		
+
+		/**
+		 * 
+		 * @return 
+		 * 
+		 */
+		public static function get menuType():String {
+			return _menuType;
+		}
+
 		/**
 		 * 
 		 * @param value
 		 * 
 		 */
-		public static function set debug(value:Boolean):void {
-			_debug = value;
+		public static function set menuType(value:String):void {
+			_menuType = value;
 		}
+
 		
 	}
 }

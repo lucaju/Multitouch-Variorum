@@ -1,0 +1,651 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextFlow xmlns='http://ns.adobe.com/textLayout/2008'>
+	<div id='act1' name="act" number="1" edition="BaseText">
+		<div id="scene1" name="scene" number="1">
+			<p line="1">
+				<span styleName="LineNumber">1</span>
+				<g styleName="Act Intro">Actus primus, Scena prima.<span styleName="Variation" id="1"> </span></g>
+			</p>
+			<p line="2">
+				<span styleName="LineNumber">2</span>
+				<g styleName="Stage Direction">Enter the Duke of Ephesus, with the Merchant of Siracusa,</g>
+			</p>
+			<p line="3">
+				<span styleName="LineNumber">3</span>
+				<g styleName="Stage Direction"><span styleName="Variation" id="2">Iaylor</span>, and other attendants.</g>
+			</p>
+			<p line="4">
+				<span styleName="LineNumber">4</span>
+				<g styleName="Speaker">Marchant.</g>
+			</p>
+			<p line="5">
+				<span styleName="LineNumber">5</span>
+				Proceed <span styleName="Variation" id="3">Solinus</span> to procure my fall, 
+			</p>
+			<p line="6">
+				<span styleName="LineNumber">6</span>
+				And by <span styleName="Variation" id="4">the</span> doome of death end woes and all.
+			</p>
+			<p line="7">
+				<span styleName="LineNumber">7</span>
+				<g styleName="Speaker">Duke.</g> Merchant of <span styleName="Variation" id="5">Siracusa</span>, plead no more.
+			</p>
+			<p line="8">
+				<span styleName="LineNumber">8</span>
+				I am not partiall to infringe our Lawes;
+			</p>
+			<p line="9">
+				<span styleName="LineNumber">9</span>
+				The enmity and discord which of late
+			</p>
+			<p line="10">
+				<span styleName="LineNumber">10</span>
+				Sprung from the rancorous outrage of your Duke,
+			</p>
+			<p line="11">
+				<span styleName="LineNumber">11</span>
+				To Merchants our well-dealing Countrimen,
+			</p>
+			<p line="12">
+				<span styleName="LineNumber">12</span>
+				Who wanting gilders to redeeme their liues,
+			</p>
+			<p line="13">
+				<span styleName="LineNumber">13</span>
+				Haue seal’d his rigorous statutes with their blouds,
+			</p>
+			<p line="14">
+				<span styleName="LineNumber">14</span>
+				Excludes all pitty from our threatning lookes:
+			</p>
+			<p line="15">
+				<span styleName="LineNumber">15</span>
+				For since the mortall and intestine iarres 
+			</p>
+			<p line="16">
+				<span styleName="LineNumber">16</span>
+				Twixt thy seditious Countrimen and vs,
+			</p>
+			<p line="17">
+				<span styleName="LineNumber">17</span>
+				It hath in solemne Synodes beene decreed,
+			</p>
+			<p line="18">
+				<span styleName="LineNumber">18</span>
+				Both by the <span styleName="Variation" id="6">Siracusians</span> and our selues,
+			</p>
+			<p line="19">
+				<span styleName="LineNumber">19</span>
+				To admit no trafficke to our aduerse townes:
+			</p>
+			<p line="20">
+				<span styleName="LineNumber">20</span>
+				Nay more, if any borne at Ephesus
+			</p>
+			<p line="21">
+				<span styleName="LineNumber">21</span>
+				Be seene at <span styleName="Variation" id="7">any</span> <span styleName="Variation" id="94">Siracusian</span> Marts <span styleName="Variation" id="8">and</span> Fayres:
+			</p>
+			<p line="22">
+				<span styleName="LineNumber">22</span>
+				Againe, if any <span styleName="Variation" id="94">Siracusian</span> borne
+			</p>
+			<p line="23">
+				<span styleName="LineNumber">23</span>
+				Come to the Bay of Ephesus, he dies:
+			</p>
+			<p line="24">
+				<span styleName="LineNumber">24</span>
+				His goods confiscate to the Dukes dispose,
+			</p>
+			<p line="25">
+				<span styleName="LineNumber">25</span>
+				Vnlesse a thousand markes be leuied
+			</p>
+			<p line="26">
+				<span styleName="LineNumber">26</span>
+				To quit the penalty, and <span styleName="Variation" id="9">to</span> ransome him:
+			</p>
+			<p line="27">
+				<span styleName="LineNumber">27</span>
+				Thy substance, valued at the highest rate,
+			</p>
+			<p line="28">
+				<span styleName="LineNumber">28</span>
+				Cannot amount vnto a hundred <span styleName="Variation" id="10">Markes</span>,
+			</p>
+			<p line="29">
+				<span styleName="LineNumber">29</span>
+				Therefore by Law thou art condemn’d to die.
+			</p>
+			<p line="30">
+				<span styleName="LineNumber">30</span>
+				<g styleName="Speaker">Mer.</g> Yet <span styleName="Variation" id="11">this</span> my comfort<span styleName="Variation" id="12">,</span> when your words are done,
+			</p>
+			<p line="31">
+				<span styleName="LineNumber">31</span>
+				My woes end likewise with the euening Sonne.
+			</p>
+			<p line="32">
+				<span styleName="LineNumber">32</span>
+				<g styleName="Speaker">Duk.</g> Well <span styleName="Variation" id="94">Siracusian</span>; say in briefe the cause
+			</p>
+			<p line="33">
+				<span styleName="LineNumber">33</span>
+				Why thou departedst from thy natiue home?
+			</p>
+			<p line="34">
+				<span styleName="LineNumber">34</span>
+				And for what cause thou cam’st to Ephesus.
+			</p>
+			<p line="35">
+				<span styleName="LineNumber">35</span>
+				<g styleName="Speaker">Mer.</g> A heauier taske could not haue beene impos’d,
+			</p>
+			<p line="36">
+				<span styleName="LineNumber">36</span>
+				Then I to speake my <span styleName="Variation" id="13">griefes</span> vnspeakeable:
+			</p>
+			<p line="37">
+				<span styleName="LineNumber">37</span>
+				Yet that the world may witnesse that my end
+			</p>
+			<p line="38">
+				<span styleName="LineNumber">38</span>
+				Was wrought by <span styleName="Variation" id="14">nature</span>, not by vile offence,
+			</p>
+			<p line="39">
+				<span styleName="LineNumber">39</span>
+				Ile vtter what my sorrow giues me leaue.
+			</p>
+			<p line="40">
+				<span styleName="LineNumber">40</span>
+				In <span styleName="Variation" id="15">Syracusa</span> was I borne, and wedde
+			</p>
+			<p line="41">
+				<span styleName="LineNumber">41</span>
+				Vnto a woman, happy but for me,
+			</p>
+			<p line="42">
+				<span styleName="LineNumber">42</span>
+				And by me<span styleName="Variation" id="16"> </span>; had not <span styleName="Variation" id="17">our</span> hap beene bad:
+			</p>
+			<p line="43">
+				<span styleName="LineNumber">43</span>
+				With her I liu’d in ioy, our wealth increast
+			</p>
+			<p line="44">
+				<span styleName="LineNumber">44</span>
+				By prosperous voyages I often made
+			</p>
+			<p line="45">
+				<span styleName="LineNumber">45</span>
+				To <span styleName="Variation" id="18">Epidamium</span><span styleName="Variation" id="19">,</span> till my factors death<span styleName="Variation" id="20">,</span>
+			</p>
+			<p line="46">
+				<span styleName="LineNumber">46</span>
+				And <span styleName="Variation" id="21">he</span><span styleName="Variation" id="22"> </span>great <span styleName="Variation" id="23">care</span> of goods at randone <span styleName="Variation" id="24">left</span>,
+			</p>
+			<p line="47">
+				<span styleName="LineNumber">47</span>
+				Drew me from kinde embracements of my spouse;
+			</p>
+			<p line="48">
+				<span styleName="LineNumber">48</span>
+				From whom my absence was not sixe moneths olde,
+			</p>
+			<p line="49">
+				<span styleName="LineNumber">49</span>
+				Before her selfe (almost at fainting vnder
+			</p>
+			<p line="50">
+				<span styleName="LineNumber">50</span>
+				The pleasing punishment that women beare)
+			</p>
+			<p line="51">
+				<span styleName="LineNumber">51</span>
+				Had made prouision for her following me,
+			</p>
+			<p line="52">
+				<span styleName="LineNumber">52</span>
+				And soone, and safe, arriued where I was:
+			</p>
+			<p line="53">
+				<span styleName="LineNumber">53</span>
+				There <span styleName="Variation" id="25">had she</span> not beene long, but she became
+			</p>
+			<p line="54">
+				<span styleName="LineNumber">54</span>
+				A ioyfull mother of two goodly sonnes:
+			</p>
+			<p line="55">
+				<span styleName="LineNumber">55</span>
+				And, which was strange, the one so like the other,
+			</p>
+			<p line="56">
+				<span styleName="LineNumber">56</span>
+				As could not be distinguish’d but by names.
+			</p>
+			<p line="57">
+				<span styleName="LineNumber">57</span>
+				That very howre, and in the selfe-same Inne,
+			</p>
+			<p line="58">
+				<span styleName="LineNumber">58</span>
+				A <span styleName="Variation" id="26">meane</span> woman was <span styleName="Variation" id="27">deliuered</span>
+			</p>
+			<p line="59">
+				<span styleName="LineNumber">59</span>
+				Of such a burthen<span styleName="Variation" id="28"> Male, twins</span> both alike:
+			</p>
+			<p line="60">
+				<span styleName="LineNumber">60</span>
+				Those, for their parents were exceeding poore,
+			</p>
+			<p line="61">
+				<span styleName="LineNumber">61</span>
+				I bought, and brought vp to attend my sonnes.
+			</p>
+			<p line="62">
+				<span styleName="LineNumber">62</span>
+				My wife, not meanely prowd of two such boyes,
+			</p>
+			<p line="63">
+				<span styleName="LineNumber">63</span>
+				Made daily motions for our <span styleName="Variation" id="29">home returne</span>:
+			</p>
+			<p line="64">
+				<span styleName="LineNumber">64</span>
+				Vnwilling<span styleName="Variation" id="30"> </span>I agreed<span styleName="Variation" id="31">,</span> alas, too soone<span styleName="Variation" id="32"> </span>wee came aboord.
+			</p>
+			<p line="65">
+				<span styleName="LineNumber">65</span>
+				A league from <span styleName="Variation" id="16">Epidamium</span> had we saild
+			</p>
+			<p line="66">
+				<span styleName="LineNumber">66</span>
+				Before the alwaies winde-obeying deepe
+			</p>
+			<p line="67">
+				<span styleName="LineNumber">67</span>
+				Gaue any Tragicke Instance of our harme:
+			</p>
+				<p line="68">
+				<span styleName="LineNumber">68</span>
+				But longer did we not retaine much hope;
+			</p>
+			<p line="69">
+				<span styleName="LineNumber">69</span>
+				For what <span styleName="Variation" id="33">obscured</span> light the heauens did grant,
+			</p>
+			<p line="70">
+				<span styleName="LineNumber">70</span>
+				Did but conuay vnto our fearefull mindes
+			</p>
+			<p line="71">
+				<span styleName="LineNumber">71</span>
+				A doubtfull warrant of immediate death,
+			</p>
+			<p line="72">
+				<span styleName="LineNumber">72</span>
+				Which though my selfe would <span styleName="Variation" id="34">gladly</span> haue imbrac’d,
+			</p>
+			<p line="73">
+				<span styleName="LineNumber">73</span>
+				Yet the incessant <span styleName="Variation" id="35">weepings</span> of my wife,
+			</p>
+			<p line="74">
+				<span styleName="LineNumber">74</span>
+				Weeping before for what she saw must come,
+			</p>
+			<p line="75">
+				<span styleName="LineNumber">75</span>
+				And pitteous playnings of the prettie babes
+			</p>
+			<p line="76">
+				<span styleName="LineNumber">76</span>
+				That mourn’d for fashion, ignorant what to feare,
+			</p>
+			<p line="77">
+				<span styleName="LineNumber">77</span>
+				Forst me to seeke delayes for them and me,
+			</p>
+			<p line="78">
+				<span styleName="LineNumber">78</span>
+				And <span styleName="Variation" id="36">this</span> it <span styleName="Variation" id="37">was</span>: (for other meanes was none)
+			</p>
+			<p line="79">
+				<span styleName="LineNumber">79</span>
+				The Sailors sought for safety by our boate,
+			</p>
+			<p line="80">
+				<span styleName="LineNumber">80</span>
+				And left the ship<span styleName="Variation" id="38"> </span>then sinking ripe<span styleName="Variation" id="39"> </span>to vs.
+			</p>
+			<p line="81">
+				<span styleName="LineNumber">81</span>
+				My wife, <span styleName="Variation" id="40">more</span> carefull for the <span styleName="Variation" id="41">latter</span> borne,
+			</p>
+			<p line="82">
+				<span styleName="LineNumber">82</span>
+				Had fastned him vnto a small spare Mast,
+			</p>
+			<p line="83">
+				<span styleName="LineNumber">83</span>
+				Such as sea-<span styleName="Variation" id="42">faring</span> men prouide for stormes:
+			</p>
+			<p line="84">
+				<span styleName="LineNumber">84</span>
+				To him one of the other twins was bound,
+			</p>
+			<p line="85">
+				<span styleName="LineNumber">85</span>
+				Whil’st I had beene like heedfull of the other.
+			</p>
+			<p line="86">
+				<span styleName="LineNumber">86</span>
+				The children thus dispos’d, my wife and I,
+			</p>
+			<p line="87">
+				<span styleName="LineNumber">87</span>
+				Fixing our eyes on whom our care was fixt,
+			</p>
+			<p line="88">
+				<span styleName="LineNumber">88</span>
+				Fastned our selues at <span styleName="Variation" id="43">eyther end the</span> <span styleName="Variation" id="44">mast</span>,
+			</p>
+			<p line="89">
+				<span styleName="LineNumber">89</span>
+				<span styleName="Variation" id="45">And</span> floating straight, obedient to the streame,
+			</p>
+			<p line="90">
+				<span styleName="LineNumber">90</span>
+				<span styleName="Variation" id="46">Was</span> carried towards Corinth, as we thought.
+			</p>
+			<p line="91">
+				<span styleName="LineNumber">91</span>
+				At length the sonne gazing vpon the earth,
+			</p>
+			<p line="92">
+				<span styleName="LineNumber">92</span>
+				Disperst those vapours that offended vs,
+			</p>
+			<p line="93">
+				<span styleName="LineNumber">93</span>
+				And by the benefit of his <span styleName="Variation" id="47">wished</span> light
+			</p>
+			<p line="94">
+				<span styleName="LineNumber">94</span>
+				The <span styleName="Variation" id="48">seas waxt</span> calme, and we <span styleName="Variation" id="49">discouered</span>
+			</p>
+			<p line="95">
+				<span styleName="LineNumber">95</span>
+				Two shippes<span styleName="Variation" id="50"> </span>from farre<span styleName="Variation" id="51">,</span> making amaine to vs:
+			</p>
+			<p line="96">
+				<span styleName="LineNumber">96</span>
+				Of Corinth that, of Epidarus this,
+			</p>
+			<p line="97">
+				<span styleName="LineNumber">97</span>
+				But ere they came, oh let me say no more,
+			</p>
+			<p line="98">
+				<span styleName="LineNumber">98</span>
+				Gather the sequell by that went before.
+			</p>
+			<p line="99">
+				<span styleName="LineNumber">99</span>
+				<g styleName="Speaker">Duk.</g> Nay forward old man, doe not breake off so,
+			</p>
+			<p line="100">
+				<span styleName="LineNumber">100</span>
+				For we may pitty, though not pardon thee.
+			</p>
+			<p line="101">
+				<span styleName="LineNumber">101</span>
+				<g styleName="Speaker">Merch.</g> Oh had the gods done so, I had not now
+			</p>
+			<p line="102">
+				<span styleName="LineNumber">102</span>
+				Worthily tearm’d them mercilesse to vs:
+			</p>
+			<p line="103">
+				<span styleName="LineNumber">103</span>
+				For ere the ships could meet by twice fiue leagues,
+			</p>
+			<p line="104">
+				<span styleName="LineNumber">104</span>
+				We were encountred by a mighty rocke,
+			</p>
+			<p line="105">
+				<span styleName="LineNumber">105</span>
+				Which being violently borne <span styleName="Variation" id="52">vp</span>,
+			</p>
+			<p line="106">
+				<span styleName="LineNumber">106</span>
+				Our <span styleName="Variation" id="53">helpefull</span> ship was splitted in the midst;
+			</p>
+			<p line="107">
+				<span styleName="LineNumber">107</span>
+				So that in this vniust diuorce of vs,
+			</p>
+			<p line="108">
+				<span styleName="LineNumber">108</span>
+				Fortune had left to both of vs alike,
+			</p>
+			<p line="109">
+				<span styleName="LineNumber">109</span>
+				What to delight in, what to sorrow for,
+			</p>
+			<p line="110">
+				<span styleName="LineNumber">110</span>
+				Her part, poore soule, seeming as burdened
+			</p>
+			<p line="111">
+				<span styleName="LineNumber">111</span>
+				With lesser waight, but not with lesser woe,
+			</p>
+			<p line="112">
+				<span styleName="LineNumber">112</span>
+				Was carried with more speed before the winde,
+			</p>
+			<p line="113">
+				<span styleName="LineNumber">113</span>
+				And in our sight they three were taken vp
+			</p>
+			<p line="114">
+				<span styleName="LineNumber">114</span>
+				By Fishermen of Corinth, as we thought.
+			</p>
+			<p line="115">
+				<span styleName="LineNumber">115</span>
+				At length <span styleName="Variation" id="54">another</span> ship had seiz’d on vs,
+			</p>
+			<p line="116">
+				<span styleName="LineNumber">116</span>
+				And knowing whom it was their hap to saue,
+			</p>
+			<p line="117">
+				<span styleName="LineNumber">117</span>
+				Gaue <span styleName="Variation" id="55">healthfull</span> welcome to their ship-<span styleName="Variation" id="56">wrackt</span> guests,
+			</p>
+			<p line="118">
+				<span styleName="LineNumber">118</span>
+				And would haue reft the <span styleName="Variation" id="57">Fishers</span> of their prey,
+			</p>
+			<p line="119">
+				<span styleName="LineNumber">119</span>
+				Had not their <span styleName="Variation" id="58">backe</span> beene very slow <span styleName="Variation" id="59">of</span> saile;
+			</p>
+			<p line="120">
+				<span styleName="LineNumber">120</span>
+				And therefore homeward did they <span styleName="Variation" id="60">bend</span> their course.
+			</p>
+			<p line="121">
+				<span styleName="LineNumber">121</span>
+				Thus haue you heard me seuer’d from my blisse,
+			</p>
+			<p line="122">
+				<span styleName="LineNumber">122</span>
+				<span styleName="Variation" id="61">That</span> by <span styleName="Variation" id="62">misfortunes</span> was my life prolong’d,
+			</p>
+			<p line="123">
+				<span styleName="LineNumber">123</span>
+				To tell sad stories of <span styleName="Variation" id="63">my</span> owne mishaps.
+			</p>
+			<p line="124">			
+				<span styleName="LineNumber">124</span>
+				<g styleName="Speaker">Duke.</g> And for the <span styleName="Variation" id="64">sake</span> of them thou sorrowest for,
+			</p>
+			<p line="125">
+				<span styleName="LineNumber">125</span>
+				Doe me the fauour to dilate <span styleName="Variation" id="65">at</span> full,
+			</p>
+			<p line="126">
+				<span styleName="LineNumber">126</span>
+				What <span styleName="Variation" id="66">haue</span> <span styleName="Variation" id="67">befalne of</span> them and <span styleName="Variation" id="68">they</span> till now.
+			</p>
+			<p line="127">
+				<span styleName="LineNumber">127</span>
+				<g styleName="Speaker">Merch.</g> My yongest boy, and yet my eldest care,
+			</p>
+			<p line="128">
+				<span styleName="LineNumber">128</span>
+				At eighteene yeeres became inquisitiue
+			</p>
+			<p line="129">
+				<span styleName="LineNumber">129</span>
+				After his brother; and importun’d me
+			</p>
+			<p line="130">
+				<span styleName="LineNumber">130</span>
+				That his attendant, <span styleName="Variation" id="69">so</span> his case was like,
+			</p>
+			<p line="131">
+				<span styleName="LineNumber">131</span>
+				Reft of his brother, but retain’d his name,
+			</p>
+			<p line="132">
+				<span styleName="LineNumber">132</span>
+				Might beare him company in <span styleName="Variation" id="70">the</span> quest of him:
+			</p>
+			<p line="133">
+				<span styleName="LineNumber">133</span>
+				Whom whil’st <span styleName="Variation" id="71">I</span> laboured of <span styleName="Variation" id="72">a loue</span> to see,
+			</p>
+			<p line="134">
+				<span styleName="LineNumber">134</span>
+				I hazarded the losse of whom I lou’d.
+			</p>
+			<p line="135">
+				<span styleName="LineNumber">135</span>
+				Fiue Sommers haue I spent in <span styleName="Variation" id="73">farthest</span> <span styleName="Variation" id="74">Greece</span>,
+			</p>
+			<p line="136">
+				<span styleName="LineNumber">136</span>
+				Roming cleane through the bounds of Asia,
+			</p>
+			<p line="137">
+				<span styleName="LineNumber">137</span>
+				And coasting homeward, came to Ephesus:
+			</p>
+			<p line="138">
+				<span styleName="LineNumber">138</span>
+				Hopelesse to finde, yet loth to leaue vnsought
+			</p>
+			<p line="139">
+				<span styleName="LineNumber">139</span>
+				<span styleName="Variation" id="75">Or</span> that, or any place that harbours men:
+			</p>
+			<p line="140">
+				<span styleName="LineNumber">140</span>
+				But <span styleName="Variation" id="76">heere</span> must end the story of my life,
+			</p>
+			<p line="141">
+				<span styleName="LineNumber">141</span>
+				And happy were I in my timelie death,
+			</p>
+			<p line="142">
+				<span styleName="LineNumber">142</span>
+				Could all my trauells warrant me they liue.
+			</p>
+			<p line="143">
+				<span styleName="LineNumber">143</span>
+				<g styleName="Speaker">Duke.</g> Haplesse Egeon whom the fates haue markt
+			</p>
+			<p line="144">
+				<span styleName="LineNumber">144</span>
+				To beare the extremitie of<span styleName="Variation" id="77"> </span>dire mishap:
+			</p>
+			<p line="145">
+				<span styleName="LineNumber">145</span>
+				Now trust me, were it not against our Lawes,
+			</p>
+			<p line="146">
+				<span styleName="LineNumber">146</span>
+				<span styleName="Variation" id="78">Against my Crowne, my oath, my dignity,</span>
+			</p>
+			<p line="147">
+				<span styleName="LineNumber">147</span>
+				Which Princes<span styleName="Variation" id="79"> </span>would<span styleName="Variation" id="80"> </span>they<span styleName="Variation" id="81"> </span>may not disanull,
+			</p>
+			<p line="148">
+				<span styleName="LineNumber">148</span>
+				My soule should sue as aduocate for thee:
+			</p>
+			<p line="149">
+				<span styleName="LineNumber">149</span>
+				But though thou art adiudged to the death,
+			</p>
+			<p line="150">
+				<span styleName="LineNumber">150</span>
+				And passed sentence may not be recal’d
+			</p>
+			<p line="151">
+				<span styleName="LineNumber">151</span>
+				But to our honours great disparagement:
+			</p>
+			<p line="152">
+				<span styleName="LineNumber">152</span>
+				Yet <span styleName="Variation" id="82">will I</span> fauour thee in what I can;
+			</p>
+			<p line="153">
+				<span styleName="LineNumber">153</span>
+				<span styleName="Variation" id="83"> </span>Therefore<span styleName="Variation" id="84"> </span><span styleName="Variation" id="85">Marchant</span>, <span styleName="Variation" id="86">Ile</span> limit thee this day
+			</p>
+			<p line="154">
+				<span styleName="LineNumber">154</span>
+				To seeke <span styleName="Variation" id="87">thy helpe</span> by <span styleName="Variation" id="88">beneficiall helpe</span>,
+			</p>
+			<p line="155">
+				<span styleName="LineNumber">155</span>
+				Try all the friends thou hast in Ephesus,
+			</p>
+			<p line="156">
+				<span styleName="LineNumber">156</span>
+				Beg thou, or borrow, to make vp the summe,
+			</p>
+			<p line="157">
+				<span styleName="LineNumber">157</span>
+				And liue: if <span styleName="Variation" id="89">no</span>, then <span styleName="Variation" id="90">thou art</span> doom’d to die:
+			</p>
+			<p line="158">
+				<span styleName="LineNumber">158</span>
+				<span styleName="Variation" id="91">Iaylor,</span> take him <span styleName="Variation" id="92">to</span> thy custodie.<span styleName="Variation" id="93"> </span>
+			</p>
+			<p line="159">
+				<span styleName="LineNumber">159</span>
+				<g styleName="Speaker">Iaylor.</g> I will my Lord.
+			</p>
+			<p line="160">
+				<span styleName="LineNumber">160</span>
+				<g styleName="Speaker">Merch.</g> Hopelesse and helpelesse doth Egean wend,
+			</p>
+			<p line="161">
+				<span styleName="LineNumber">161</span>
+				But to procrastinate his liuelesse end. <g styleName="Stage Direction">Exeunt.</g>
+			</p>
+		</div>
+	</div>
+</TextFlow>

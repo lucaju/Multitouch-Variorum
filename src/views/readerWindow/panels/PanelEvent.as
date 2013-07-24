@@ -1,4 +1,4 @@
-package events{
+package views.readerWindow.panels {
 	
 	//import
 	import flash.events.Event;
@@ -8,17 +8,15 @@ package events{
 	 * @author lucaju
 	 * 
 	 */
-	public class MtVEvent extends Event {
+	public class PanelEvent extends Event {
 		
 		//****************** Properties ****************** ****************** ******************
 		
-		public static const CHANGE				:String = "change";
-		public static const UPDATE				:String = "update";
-		public static const COMPLETE			:String = "complete";
-		public static const SELECT				:String = "select";
-		public static const KILL				:String = "kill";
+		public static const CELL_EXPANDED		:String = "cell_expanded";
+		public static const CELL_SELECTED		:String = "cell_selected";
 		
 		public var phase						:String = "";
+		public var targetID						:int;
 		public var parameters					:Object; 
 			
 		
@@ -32,15 +30,17 @@ package events{
 		 * @param cancelable
 		 * 
 		 */
-		public function MtVEvent(type:String,
+		public function PanelEvent(type:String,
 								  phase:String = null,
-								  parameters:Object = null,
+								  targetID = 0,
+								  parameters = null,
 								  bubbles:Boolean = true,
 								  cancelable:Boolean = false) {
 			
 			
 			super(type, bubbles, cancelable);
 			this.phase = phase;
+			this.targetID = targetID;
 			this.parameters = parameters;
 		}
 		
@@ -53,7 +53,7 @@ package events{
 		 * 
 		 */
 		public override function clone():Event {
-			return new MtVEvent(type, phase, parameters, bubbles, cancelable);
+			return new PanelEvent(type, phase, targetID, parameters, bubbles, cancelable);
 		}
 		
 		/**
@@ -62,7 +62,7 @@ package events{
 		 * 
 		 */
 		public override function toString():String {
-			return formatToString("MtVEvent", "type", "phase", "parameters", "bubbles", "cancelable", "eventPhase");
+			return formatToString("PanelEvent", "type", "phase", "targetID", "parameters", "bubbles", "cancelable", "eventPhase");
 		}
 			
 	}
