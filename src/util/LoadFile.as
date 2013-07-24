@@ -7,30 +7,56 @@ package util {
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class LoadFile extends Sprite{
 		
-		public const IMAGE:String = "image";
-		public const DATA:String = "data";
+		//****************** Properties ****************** ****************** ******************
 		
-		//properties
-		private var urlRequest:URLRequest;
-		private var urlLoader:URLLoader;
+		public const IMAGE						:String = "image";
+		public const DATA						:String = "data";
 		
 		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		public function LoadFile() {
 	
 		}
 		
+		
+		//****************** PROTECTED EVENTS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param e
+		 * @return 
+		 * 
+		 */
+		private function loadComplete(e:Event):* {
+			return e.target.data;
+		}
+		
+		
+		//****************** PUBLIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param file
+		 * 
+		 */
 		public function load(file:String):void {
-			
-			urlRequest = new URLRequest(file);
-			urlLoader = new URLLoader();
+			var urlRequest:URLRequest = new URLRequest(file);
+			var urlLoader:URLLoader = new URLLoader();
 			urlLoader.addEventListener(Event.COMPLETE, loadComplete);
 			urlLoader.load(urlRequest);
 		}
 		
-		private function loadComplete(e:Event):* {
-			return e.target.data;
-		}
 	}
 }

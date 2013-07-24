@@ -4,13 +4,34 @@ package util {
 	import flash.display.Sprite;
 	import flash.geom.Matrix;
 	
+	/**
+	 * 
+	 * @author lucaju
+	 * 
+	 */
 	public class Utilities extends Sprite {
 		
+		//****************** Constructor ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * 
+		 */
 		public function Utilities() {
 			
 		}
 		
 		
+		//****************** PUBLIC STATIC METHODS ****************** ****************** ******************
+		
+		/**
+		 * 
+		 * @param s
+		 * @param regx
+		 * @param regy
+		 * @param showRegistration
+		 * 
+		 */
 		static public function setRegistrationPoint(s:Sprite, regx:Number, regy:Number, showRegistration:Boolean = false):void {
 			//translate movieclip 
 			s.transform.matrix = new Matrix(1, 0, 0, 1, -regx, -regy);

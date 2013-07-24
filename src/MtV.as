@@ -7,39 +7,48 @@ package {
 	
 	import controller.MtVController;
 	
-	import model.BaseTextModel;
-	import model.CommentsModel;
-	import model.EditionsModel;
-	import model.MtVInterfaceModel;
-	import model.VariationsModel;
+	import models.MtVInterfaceModel;
+	import models.baseText.BaseTextModel;
+	import models.comment.CommentsModel;
+	import models.edition.EditionsModel;
+	import models.reader.ReadersModel;
+	import models.variable.VariablesModel;
 	
-	import util.DeviceInfo;
+	import settings.Settings;
+	
 	import util.Global;
 	
-	import view.MtVView;
+	import views.MtVView;
 	
 	[SWF(width="1250", height="850", backgroundColor="#ffffff", frameRate="30")]
 	//[SWF(width="1920", height="1080", backgroundColor="#ffffff", frameRate="30")]
 	//[SWF(width="1920", height="1030", backgroundColor="#ffffff", frameRate="30")]
 	
-	
 	public class MtV extends Sprite {
 		
-		//properties
-		private var mtVInterfaceModel:MtVInterfaceModel;	//Model
-		private var baseTextModel:BaseTextModel;			//Model
-		private var editionsModel:EditionsModel;			//Model
-		private var variatonsModel:VariationsModel;			//Model
-		private var commentsModel:CommentsModel;			//Model
+		//****************** Properties ****************** ****************** ******************
+		protected var mtVInterfaceModel				:MtVInterfaceModel; 		//Model
+		protected var baseTextModel					:BaseTextModel;				//Model
+		protected var editionsModel					:EditionsModel;				//Model
+		protected var variatonsModel				:VariablesModel;			//Model
+		protected var commentsModel					:CommentsModel;				//Model
+		protected var readersModel					:ReadersModel;				//Model
 		
-		private var mtvController:MtVController;			//Controller
+		protected var mtvController					:MtVController;				//Controller
 		
-		private var mtvView:MtVView;						//View
+		protected var mtvView						:MtVView;					//View
+		
+		protected var configure						:Settings;					//Settings
+		
+		//****************** Constructor ****************** ****************** ******************
 		
 		public function MtV() {
 			
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
+			
+			//settings
+			setting();
 			
 			//global
 			Global.globalWidth = stage.stageWidth;
@@ -49,26 +58,39 @@ package {
 			mtVInterfaceModel = new MtVInterfaceModel();
 			baseTextModel = new BaseTextModel();
 			editionsModel = new EditionsModel();
-			variatonsModel = new VariationsModel();
+			variatonsModel = new VariablesModel();
 			commentsModel = new CommentsModel();
+			readersModel = new ReadersModel();
 			
 			//starting controler
-			mtvController = new MtVController([mtVInterfaceModel,baseTextModel,editionsModel,variatonsModel,commentsModel]);
+			mtvController = new MtVController([mtVInterfaceModel,baseTextModel,editionsModel,variatonsModel,commentsModel,readersModel]);
 			
 			//Starting View
 			mtvView = new MtVView(mtvController);
 			addChild(mtvView);
 			mtvView.initialize();
 			
-			trace (DeviceInfo.os())
+			//trace (DeviceInfo.os())
 			
-			if (DeviceInfo.os() != "Mac") {
-				mtvView.scaleX = mtvView.scaleY = 2;
-			}
+			if (Settings.platformTarget == "mobile") mtvView.scaleX = mtvView.scaleY = 2;
 			
 			//debug stat
 			//addChild(new Stats());
 			
+		}
+		
+		//****************** PRIVATE METHODS ****************** ****************** ****************** 
+		
+		/**
+		 * 
+		 * 
+		 */
+		private function setting():void {
+			configure = new Settings();
+			//default values
+			Settings.platformTarget = "air";
+			Settings.debug = false;
+			Settings.menuType = "circular";
 		}
 		
 	}
