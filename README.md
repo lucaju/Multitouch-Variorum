@@ -1,4 +1,4 @@
 Multitouch-Variorum
 ===================
 
-Demo: http://labs.fluxo.art.br/mtv/
+Demo: https://vimeo.com/70527973
